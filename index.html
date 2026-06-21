@@ -3,49 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SnapWeb | Premium Websites for Clinics & Local Businesses</title>
     
-    <!-- Google Fonts -->
+    <!-- SEO Meta Tags -->
+    <title>Professional Medical Websites Starting at ₹299/year | Snapweb</title>
+    <meta name="description" content="Helping doctors, clinics, dentists, psychologists, physiotherapists, and healthcare professionals establish a strong online presence starting at just ₹299/year.">
+    <meta name="keywords" content="Medical Websites, Doctor Website, Clinic Website Developer, Healthcare Web Design, Snapweb">
+    <meta name="author" content="Snapweb">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Professional Medical Websites Starting at ₹299/year | Snapweb">
+    <meta property="og:description" content="Establish a strong online presence with our professional healthcare websites. Mobile-friendly, SEO optimized, and WhatsApp integrated.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapweb.example.com">
+    <meta property="og:image" content="https://snapweb.example.com/og-image.jpg">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Professional Medical Websites Starting at ₹299/year">
+    <meta name="twitter:description" content="Establish a strong online presence with our professional healthcare websites.">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Snapweb",
+      "description": "Professional medical website development for healthcare professionals.",
+      "url": "https://snapweb.example.com",
+      "priceRange": "₹299 - ₹2000"
+    }
+    </script>
+
+    <!-- Google Fonts & FontAwesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Tailwind Configuration -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        heading: ['Poppins', 'sans-serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
                     },
                     colors: {
                         brand: {
-                            navy: '#0f172a',
                             blue: '#2563eb',
                             cyan: '#06b6d4',
-                            purple: '#7c3aed',
-                            light: '#f8fafc',
+                            dark: '#0f172a',
+                            light: '#f8fafc'
                         }
                     },
                     animation: {
-                        'blob': 'blob 7s infinite',
                         'float': 'float 6s ease-in-out infinite',
-                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float-delayed': 'float 6s ease-in-out 3s infinite',
                     },
                     keyframes: {
-                        blob: {
-                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
-                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
-                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
-                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
-                        },
                         float: {
                             '0%, 100%': { transform: 'translateY(0)' },
                             '50%': { transform: 'translateY(-20px)' },
@@ -56,774 +72,847 @@
         }
     </script>
 
-    <!-- Custom CSS for Glassmorphism, Glows, and Animations -->
     <style>
-        body {
-            background-color: #fcfcfd;
-            background-image: radial-gradient(at 0% 0%, hsla(253,16%,7%,0.03) 0, transparent 50%), radial-gradient(at 50% 0%, hsla(225,39%,30%,0.03) 0, transparent 50%), radial-gradient(at 100% 0%, hsla(339,49%,30%,0.03) 0, transparent 50%);
-            overflow-x: hidden;
-        }
-
-        /* Typography */
-        h1, h2, h3, h4, h5, h6, .font-heading {
-            font-family: 'Poppins', sans-serif;
-        }
-
-        /* Glassmorphism */
-        .glass {
-            background: rgba(255, 255, 255, 0.75);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-        }
+        body { background-color: #f8fafc; color: #0f172a; }
         
-        .glass-dark {
-            background: rgba(15, 23, 42, 0.6);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        /* Premium Cards */
-        .premium-card {
-            background: #ffffff;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px -10px rgba(0,0,0,0.05);
-            border: 1px solid rgba(226, 232, 240, 0.8);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        .premium-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px -10px rgba(37, 99, 235, 0.15);
-            border-color: rgba(37, 99, 235, 0.2);
-        }
-
-        /* Glow Effects */
-        .glow-text {
-            background: linear-gradient(135deg, #2563eb, #06b6d4, #7c3aed);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-size: 200% auto;
-            animation: shine 4s linear infinite;
-        }
-        @keyframes shine {
-            to { background-position: 200% center; }
-        }
-
-        .glow-button {
-            position: relative;
-            background: linear-gradient(135deg, #2563eb, #7c3aed);
-            z-index: 1;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-        .glow-button::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(135deg, #06b6d4, #2563eb);
-            opacity: 0;
-            z-index: -1;
-            transition: opacity 0.3s ease;
-        }
-        .glow-button:hover::before {
-            opacity: 1;
-        }
-        .glow-button:hover {
-            box-shadow: 0 10px 25px -5px rgba(124, 58, 237, 0.4);
-            transform: translateY(-2px);
-        }
-
-        /* Scroll Reveal Animations */
-        .reveal {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Timeline */
-        .timeline-line::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            width: 2px;
-            background: linear-gradient(to bottom, #2563eb, #06b6d4, #7c3aed, transparent);
-            transform: translateX(-50%);
-            z-index: 0;
-        }
-        @media (max-width: 768px) {
-            .timeline-line::before { left: 24px; transform: none; }
-            .timeline-item { width: 100% !important; padding-left: 60px !important; text-align: left !important; }
-            .timeline-icon { left: 24px !important; transform: translateX(-50%) !important; }
-        }
-
-        /* FAQ Accordion */
-        details > summary {
-            list-style: none;
-        }
-        details > summary::-webkit-details-marker {
-            display: none;
-        }
+        /* Glassmorphism Classes */
+        .glass-nav { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.2); transition: all 0.3s ease; }
+        .glass-nav.scrolled { background: rgba(255, 255, 255, 0.95); box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+        .glass-card { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.6); box-shadow: 0 10px 40px rgba(37, 99, 235, 0.08); }
+        .glass-dark { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.2); }
         
-        .mockup-container {
-            perspective: 1000px;
-        }
-        .mockup-inner {
-            transform: rotateY(-15deg) rotateX(5deg);
-            transition: transform 0.5s ease;
-        }
-        .mockup-container:hover .mockup-inner {
-            transform: rotateY(0deg) rotateX(0deg);
-        }
+        /* Gradients */
+        .text-gradient { background: linear-gradient(135deg, #2563eb, #06b6d4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .bg-gradient-brand { background: linear-gradient(135deg, #2563eb, #06b6d4); }
+        
+        /* Scroll Reveal */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* Custom Checkbox */
+        .feature-checkbox:checked + div { border-color: #2563eb; background-color: #eff6ff; box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2); }
+        .feature-checkbox:checked + div .check-icon { opacity: 1; transform: scale(1); }
+        
+        /* Accordion */
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
     </style>
 </head>
-<body class="text-slate-600 antialiased selection:bg-brand-blue selection:text-white">
+<body class="antialiased selection:bg-brand-blue selection:text-white">
 
-    <!-- Sticky Navbar -->
-    <nav class="fixed w-full z-50 glass transition-all duration-300" id="navbar">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 glass-nav">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
-                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-blue to-brand-cyan flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-blue-500/30">
-                        <i class="fa-solid fa-bolt"></i>
-                    </div>
-                    <span class="font-heading font-bold text-2xl text-brand-navy tracking-tight">Snap<span class="text-brand-blue">Web</span></span>
-                </div>
+                <a href="#" class="flex items-center gap-2 group">
+                    <img src="WhatsApp Image 2026-06-14 at 11.56.17 AM.jpeg" alt="Snapweb Logo" class="h-12 w-auto object-contain group-hover:scale-105 transition-transform shadow-sm rounded-lg">
+                </a>
                 
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#services" class="font-medium text-slate-600 hover:text-brand-blue transition-colors">Services</a>
-                    <a href="#process" class="font-medium text-slate-600 hover:text-brand-blue transition-colors">Process</a>
-                    <a href="#pricing" class="font-medium text-slate-600 hover:text-brand-blue transition-colors">Pricing</a>
-                    <a href="#contact" class="glow-button px-6 py-2.5 rounded-full text-white font-medium shadow-md">
-                        Get Website
-                    </a>
+                <div class="hidden md:flex space-x-8 items-center font-medium text-slate-600">
+                    <a href="#why-us" class="hover:text-brand-blue transition-colors">Why Us</a>
+                    <a href="#pricing" class="hover:text-brand-blue transition-colors">Pricing</a>
+                    <a href="#features" class="hover:text-brand-blue transition-colors">Features</a>
+                    <a href="#faq" class="hover:text-brand-blue transition-colors">FAQ</a>
+                    <a href="#builder" class="bg-brand-blue hover:bg-blue-700 text-white px-6 py-2.5 rounded-full font-bold shadow-lg shadow-blue-500/30 transition-all hover:-translate-y-0.5">Get Started</a>
                 </div>
 
-                <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center">
-                    <button class="text-slate-600 hover:text-brand-blue focus:outline-none p-2" id="mobile-menu-btn">
-                        <i class="fa-solid fa-bars text-2xl"></i>
-                    </button>
-                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-brand-dark text-2xl focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
             </div>
         </div>
-        <!-- Mobile Menu (Hidden by default) -->
-        <div class="md:hidden hidden bg-white border-t" id="mobile-menu">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 shadow-lg">
-                <a href="#services" class="block px-3 py-2 text-base font-medium text-slate-700 hover:bg-slate-50 rounded-md">Services</a>
-                <a href="#process" class="block px-3 py-2 text-base font-medium text-slate-700 hover:bg-slate-50 rounded-md">Process</a>
-                <a href="#pricing" class="block px-3 py-2 text-base font-medium text-slate-700 hover:bg-slate-50 rounded-md">Pricing</a>
-                <a href="#contact" class="block px-3 py-2 mt-4 text-center text-white bg-brand-blue rounded-md font-medium">Get Website</a>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden bg-white border-t border-slate-100 absolute w-full shadow-2xl">
+            <div class="px-4 py-4 space-y-2 font-medium">
+                <a href="#why-us" class="block px-4 py-3 rounded-lg hover:bg-slate-50 text-slate-700">Why Us</a>
+                <a href="#pricing" class="block px-4 py-3 rounded-lg hover:bg-slate-50 text-slate-700">Pricing</a>
+                <a href="#features" class="block px-4 py-3 rounded-lg hover:bg-slate-50 text-slate-700">Features</a>
+                <a href="#faq" class="block px-4 py-3 rounded-lg hover:bg-slate-50 text-slate-700">FAQ</a>
+                <a href="#builder" class="block text-center mt-4 bg-brand-blue text-white px-6 py-3 rounded-xl font-bold">Get Started</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
-        <!-- Background Blobs -->
-        <div class="absolute top-0 -left-4 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
-        <div class="absolute top-0 -right-4 w-72 h-72 bg-cyan-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
-        <div class="absolute -bottom-8 left-20 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <!-- Hero Content -->
-                <div class="max-w-2xl reveal active">
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-brand-blue text-sm font-semibold mb-6">
-                        <span class="relative flex h-2 w-2">
-                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-blue opacity-75"></span>
-                          <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-blue"></span>
-                        </span>
-                        #1 Web Agency for Local Businesses
-                    </div>
-                    <h1 class="text-5xl lg:text-7xl font-bold text-brand-navy leading-tight mb-6">
-                        Modern Websites That <br>
-                        <span class="glow-text">Grow Your Business</span>
-                    </h1>
-                    <p class="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed">
-                        Affordable premium websites for doctors, clinics, and businesses designed to increase trust, visibility, and customer inquiries.
-                    </p>
-                    
-                    <div class="flex flex-col sm:flex-row gap-4 mb-10">
-                        <a href="#pricing" class="glow-button px-8 py-4 rounded-full text-white font-semibold text-lg text-center flex items-center justify-center gap-2">
-                            Get My Website <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </div>
-
-                    <!-- Trust Badges -->
-                    <div class="flex flex-wrap gap-4 items-center text-sm font-medium text-slate-500">
-                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-bolt text-amber-400"></i> Fast Delivery</div>
-                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-mobile-screen text-brand-blue"></i> Mobile Friendly</div>
-                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-magnifying-glass text-brand-purple"></i> SEO Ready</div>
-                        <div class="flex items-center gap-1.5"><i class="fa-brands fa-whatsapp text-green-500"></i> WhatsApp Setup</div>
-                    </div>
-                </div>
-
-                <!-- Hero Visuals -->
-                <div class="relative reveal active lg:block hidden mockup-container">
-                    <!-- Floating abstract UI elements -->
-                    <div class="absolute -top-10 -right-10 w-40 h-40 bg-gradient-to-br from-brand-cyan to-brand-blue rounded-2xl shadow-2xl opacity-20 animate-float blur-xl"></div>
-                    
-                    <div class="relative z-10 mockup-inner flex justify-center items-center">
-                        <!-- Premium Dashboard / Website Mockup -->
-                        <div class="w-full max-w-lg bg-white rounded-2xl shadow-2xl overflow-hidden border border-slate-100 flex flex-col">
-                            <div class="h-8 bg-slate-50 border-b border-slate-100 flex items-center px-4 gap-1.5">
-                                <div class="w-3 h-3 rounded-full bg-red-400"></div>
-                                <div class="w-3 h-3 rounded-full bg-amber-400"></div>
-                                <div class="w-3 h-3 rounded-full bg-green-400"></div>
-                            </div>
-                            <div class="relative w-full pb-[60%] bg-slate-100">
-                                <!-- Simulated content -->
-                                <img src="https://placehold.co/800x500/f8fafc/0f172a?text=Premium+Website+Design&font=Poppins" alt="Mockup" class="absolute inset-0 w-full h-full object-cover">
-                                <!-- Floating UI Card -->
-                                <div class="absolute -bottom-6 -left-6 glass px-6 py-4 rounded-xl shadow-xl border border-white/50 flex items-center gap-4 animate-float" style="animation-delay: 1s;">
-                                    <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center text-green-600 text-xl">
-                                        <i class="fa-solid fa-arrow-trend-up"></i>
-                                    </div>
-                                    <div>
-                                        <p class="text-xs text-slate-500 font-medium">New Leads</p>
-                                        <p class="text-xl font-bold text-brand-navy">+342%</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Mobile Mockup Floating -->
-                        <div class="absolute -bottom-10 -right-4 w-32 h-64 bg-white rounded-[2rem] shadow-2xl border-4 border-slate-800 overflow-hidden animate-float" style="animation-delay: 2s;">
-                            <img src="https://placehold.co/300x600/f8fafc/2563eb?text=Mobile+View&font=Poppins" alt="Mobile Mockup" class="w-full h-full object-cover">
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-brand-dark">
+        <!-- Abstract Background -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-brand-blue/20 blur-[120px] animate-float"></div>
+            <div class="absolute top-40 -left-20 w-[500px] h-[500px] rounded-full bg-brand-cyan/20 blur-[120px] animate-float-delayed"></div>
         </div>
-    </section>
 
-    <!-- Highlight Section (Dark Premium) -->
-    <section class="py-12 relative overflow-hidden bg-gradient-to-r from-brand-blue via-indigo-600 to-brand-purple reveal">
-        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4xKSIvPjwvc3ZnPg==')] opacity-50"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
-            <div class="text-center md:text-left">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-2">Professional Websites Starting at <span class="text-yellow-300">Just ₹1999</span></h2>
-                <p class="text-blue-100 text-lg">Affordable modern websites for clinics, doctors, and local businesses.</p>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-brand-cyan text-sm font-bold uppercase tracking-widest mb-8 backdrop-blur-md">
+                <i class="fa-solid fa-rocket"></i> Launch Your Digital Clinic
             </div>
-            <a href="#pricing" class="bg-white text-brand-blue hover:bg-slate-50 font-bold px-8 py-4 rounded-full shadow-[0_0_30px_rgba(255,255,255,0.3)] transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(255,255,255,0.5)] whitespace-nowrap">
-                Start Today <i class="fa-solid fa-rocket ml-2"></i>
-            </a>
-        </div>
-    </section>
-
-    <!-- Problem Comparison Section -->
-    <section class="py-24 relative reveal">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-5xl font-bold text-brand-navy mb-4">The Cost of Being <span class="text-brand-blue">Invisible</span></h2>
-                <p class="text-lg text-slate-600 max-w-2xl mx-auto">See the difference a premium online presence makes for your business growth.</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
-                <!-- Without Website -->
-                <div class="premium-card bg-red-50/50 border-red-100 p-8 lg:p-10 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 p-4 opacity-10 text-red-500 text-6xl"><i class="fa-solid fa-circle-xmark"></i></div>
-                    <h3 class="text-2xl font-bold text-red-600 mb-6 flex items-center gap-3">
-                        <i class="fa-solid fa-store-slash"></i> Without a Website
-                    </h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-start gap-3 text-slate-700">
-                            <i class="fa-solid fa-xmark text-red-500 mt-1"></i>
-                            <span>Invisible to people searching on Google for your services.</span>
-                        </li>
-                        <li class="flex items-start gap-3 text-slate-700">
-                            <i class="fa-solid fa-xmark text-red-500 mt-1"></i>
-                            <span>Competitors with websites steal your potential customers.</span>
-                        </li>
-                        <li class="flex items-start gap-3 text-slate-700">
-                            <i class="fa-solid fa-xmark text-red-500 mt-1"></i>
-                            <span>Business looks outdated or less trustworthy to new clients.</span>
-                        </li>
-                        <li class="flex items-start gap-3 text-slate-700">
-                            <i class="fa-solid fa-xmark text-red-500 mt-1"></i>
-                            <span>You lose leads while you are asleep or closed.</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- With SnapWeb -->
-                <div class="premium-card bg-gradient-to-br from-blue-50 to-cyan-50 border-blue-100 p-8 lg:p-10 relative overflow-hidden ring-2 ring-brand-blue/20">
-                    <div class="absolute top-0 right-0 p-4 opacity-10 text-brand-blue text-6xl"><i class="fa-solid fa-rocket"></i></div>
-                    <h3 class="text-2xl font-bold text-brand-blue mb-6 flex items-center gap-3">
-                        <i class="fa-solid fa-check-circle"></i> With SnapWeb
-                    </h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-start gap-3 text-slate-800 font-medium">
-                            <i class="fa-solid fa-check text-green-500 mt-1"></i>
-                            <span>Rank on Google and capture local search traffic instantly.</span>
-                        </li>
-                        <li class="flex items-start gap-3 text-slate-800 font-medium">
-                            <i class="fa-solid fa-check text-green-500 mt-1"></i>
-                            <span>Premium design builds instant trust and credibility.</span>
-                        </li>
-                        <li class="flex items-start gap-3 text-slate-800 font-medium">
-                            <i class="fa-solid fa-check text-green-500 mt-1"></i>
-                            <span>Works 24/7 as your best salesperson to collect leads.</span>
-                        </li>
-                        <li class="flex items-start gap-3 text-slate-800 font-medium">
-                            <i class="fa-solid fa-check text-green-500 mt-1"></i>
-                            <span>Direct WhatsApp integration turns visitors into patients/clients.</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Free Features Section -->
-    <section class="py-20 relative bg-slate-50/50 reveal">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <div class="inline-block px-4 py-1.5 rounded-full bg-purple-100 text-brand-purple font-semibold text-sm mb-4">Unbeatable Value</div>
-                <h2 class="text-3xl md:text-5xl font-bold text-brand-navy mb-4">FREE Features <span class="text-brand-purple">Included</span></h2>
-                <p class="text-lg text-slate-600">Every website we build comes packed with these premium extras at zero additional cost.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Feature Cards -->
-                <div class="premium-card p-6 group">
-                    <div class="w-12 h-12 rounded-lg bg-green-100 text-green-600 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </div>
-                    <h3 class="font-bold text-slate-800 mb-2">WhatsApp Integration</h3>
-                    <p class="text-sm text-slate-500">Let clients chat with you directly from your website with one click.</p>
-                </div>
-                <div class="premium-card p-6 group">
-                    <div class="w-12 h-12 rounded-lg bg-red-100 text-red-500 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-map-location-dot"></i>
-                    </div>
-                    <h3 class="font-bold text-slate-800 mb-2">Google Maps Integration</h3>
-                    <p class="text-sm text-slate-500">Make it effortless for local customers to find your clinic or office.</p>
-                </div>
-                <div class="premium-card p-6 group">
-                    <div class="w-12 h-12 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-share-nodes"></i>
-                    </div>
-                    <h3 class="font-bold text-slate-800 mb-2">Social Media Linking</h3>
-                    <p class="text-sm text-slate-500">Connect one social profile seamlessly to funnel traffic.</p>
-                </div>
-                <div class="premium-card p-6 group">
-                    <div class="w-12 h-12 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-magnifying-glass-chart"></i>
-                    </div>
-                    <h3 class="font-bold text-slate-800 mb-2">SEO Setup Advice</h3>
-                    <p class="text-sm text-slate-500">Basic on-page SEO structure to help you get discovered on Google.</p>
-                </div>
-                <div class="premium-card p-6 group">
-                    <div class="w-12 h-12 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-pen-to-square"></i>
-                    </div>
-                    <h3 class="font-bold text-slate-800 mb-2">2 Minor Edits/Month</h3>
-                    <p class="text-sm text-slate-500">Keep your site updated. Change phone numbers, images, or text for free.</p>
-                </div>
-                <div class="premium-card p-6 group">
-                    <div class="w-12 h-12 rounded-lg bg-cyan-100 text-cyan-600 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-mobile-screen-button"></i>
-                    </div>
-                    <h3 class="font-bold text-slate-800 mb-2">Mobile Optimization</h3>
-                    <p class="text-sm text-slate-500">Flawless responsive design that looks perfect on any phone.</p>
-                </div>
-                <div class="premium-card p-6 group">
-                    <div class="w-12 h-12 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-envelope-open-text"></i>
-                    </div>
-                    <h3 class="font-bold text-slate-800 mb-2">Contact Form Setup</h3>
-                    <p class="text-sm text-slate-500">Secure forms that send customer inquiries directly to your email.</p>
-                </div>
-                <div class="premium-card p-6 group relative overflow-hidden">
-                    <div class="absolute -right-4 -top-4 w-16 h-16 bg-brand-blue/10 rounded-full blur-xl"></div>
-                    <div class="w-12 h-12 rounded-lg bg-pink-100 text-pink-600 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform relative z-10">
-                        <i class="fa-solid fa-palette"></i>
-                    </div>
-                    <h3 class="font-bold text-slate-800 mb-2 relative z-10">Free Logo Making</h3>
-                    <p class="text-sm text-slate-500 relative z-10">Don't have a logo? We will create a clean, modern text-based logo for you.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services / Industries Section -->
-    <section id="services" class="py-24 relative reveal">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-5xl font-bold text-brand-navy mb-4">Tailored for <span class="glow-text">Your Industry</span></h2>
-                <p class="text-lg text-slate-600 max-w-2xl mx-auto">We specialize in high-converting websites for local service providers and businesses.</p>
-            </div>
-
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6">
-                <!-- Service items -->
-                <div class="glass p-6 rounded-2xl text-center hover:bg-white hover:shadow-xl transition-all cursor-pointer group border border-slate-200">
-                    <i class="fa-solid fa-user-doctor text-4xl text-brand-blue mb-4 group-hover:scale-110 transition-transform"></i>
-                    <h4 class="font-bold text-slate-800">Doctor Websites</h4>
-                </div>
-                <div class="glass p-6 rounded-2xl text-center hover:bg-white hover:shadow-xl transition-all cursor-pointer group border border-slate-200">
-                    <i class="fa-solid fa-spa text-4xl text-brand-cyan mb-4 group-hover:scale-110 transition-transform"></i>
-                    <h4 class="font-bold text-slate-800">Spa & Salon Sites</h4>
-                </div>
-                <div class="glass p-6 rounded-2xl text-center hover:bg-white hover:shadow-xl transition-all cursor-pointer group border border-slate-200">
-                    <i class="fa-solid fa-hospital text-4xl text-brand-purple mb-4 group-hover:scale-110 transition-transform"></i>
-                    <h4 class="font-bold text-slate-800">Hospital/Clinic Sites</h4>
-                </div>
-                <div class="glass p-6 rounded-2xl text-center hover:bg-white hover:shadow-xl transition-all cursor-pointer group border border-slate-200">
-                    <i class="fa-solid fa-briefcase text-4xl text-indigo-500 mb-4 group-hover:scale-110 transition-transform"></i>
-                    <h4 class="font-bold text-slate-800">Business Sites</h4>
-                </div>
-                <div class="glass p-6 rounded-2xl text-center hover:bg-white hover:shadow-xl transition-all cursor-pointer group border border-slate-200">
-                    <i class="fa-solid fa-utensils text-4xl text-orange-500 mb-4 group-hover:scale-110 transition-transform"></i>
-                    <h4 class="font-bold text-slate-800">Restaurant Sites</h4>
-                </div>
-                <div class="glass p-6 rounded-2xl text-center hover:bg-white hover:shadow-xl transition-all cursor-pointer group border border-slate-200">
-                    <i class="fa-solid fa-dumbbell text-4xl text-red-500 mb-4 group-hover:scale-110 transition-transform"></i>
-                    <h4 class="font-bold text-slate-800">Gym Websites</h4>
-                </div>
-                <div class="glass p-6 rounded-2xl text-center hover:bg-white hover:shadow-xl transition-all cursor-pointer group border border-slate-200">
-                    <i class="fa-solid fa-pager text-4xl text-emerald-500 mb-4 group-hover:scale-110 transition-transform"></i>
-                    <h4 class="font-bold text-slate-800">Landing Pages</h4>
-                </div>
-                <div class="glass p-6 rounded-2xl text-center hover:bg-white hover:shadow-xl transition-all cursor-pointer group border border-slate-200">
-                    <i class="fa-solid fa-images text-4xl text-pink-500 mb-4 group-hover:scale-110 transition-transform"></i>
-                    <h4 class="font-bold text-slate-800">Portfolio Sites</h4>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Website Matters (Infographic style) -->
-    <section class="py-20 relative bg-white border-y border-slate-100 reveal">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div>
-                    <h2 class="text-3xl md:text-5xl font-bold text-brand-navy mb-6">Why Your Business Needs This <span class="text-brand-blue">Right Now</span></h2>
-                    <p class="text-lg text-slate-600 mb-8">Consumer behavior has changed. If you aren't visible online with a professional presence, you are losing money every single day.</p>
-                    
-                    <div class="space-y-6">
-                        <div class="flex gap-4 items-start">
-                            <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center shrink-0 text-brand-blue font-bold text-xl">97%</div>
-                            <div>
-                                <h4 class="text-xl font-bold text-slate-800">Search online first</h4>
-                                <p class="text-slate-500">Almost everyone searches online to find a local business or doctor before visiting.</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-4 items-start">
-                            <div class="w-12 h-12 rounded-full bg-purple-50 flex items-center justify-center shrink-0 text-brand-purple font-bold text-xl">75%</div>
-                            <div>
-                                <h4 class="text-xl font-bold text-slate-800">Judge credibility by design</h4>
-                                <p class="text-slate-500">Consumers admit to making judgments on a company's credibility based on their website design.</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-4 items-start">
-                            <div class="w-12 h-12 rounded-full bg-cyan-50 flex items-center justify-center shrink-0 text-brand-cyan font-bold text-xl text-center leading-none"><i class="fa-solid fa-clock"></i></div>
-                            <div>
-                                <h4 class="text-xl font-bold text-slate-800">Your 24/7 Salesperson</h4>
-                                <p class="text-slate-500">A website never sleeps. It answers FAQs, builds trust, and collects leads around the clock.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="relative">
-                    <div class="absolute inset-0 bg-gradient-to-tr from-blue-100 to-purple-100 rounded-3xl transform rotate-3 scale-105 opacity-50"></div>
-                    <div class="premium-card p-8 relative">
-                        <h4 class="text-lg font-bold text-slate-800 mb-6 text-center">Inquiries & Foot Traffic Impact</h4>
-                        
-                        <!-- CSS Bar Chart -->
-                        <div class="space-y-4">
-                            <div>
-                                <div class="flex justify-between text-sm mb-1">
-                                    <span class="font-medium text-slate-600">With Premium Website</span>
-                                    <span class="text-brand-blue font-bold">+120%</span>
-                                </div>
-                                <div class="w-full bg-slate-100 rounded-full h-4 overflow-hidden">
-                                    <div class="bg-gradient-to-r from-brand-blue to-brand-cyan h-4 rounded-full w-[90%]"></div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between text-sm mb-1">
-                                    <span class="font-medium text-slate-600">With Outdated Website</span>
-                                    <span class="text-slate-500 font-bold">+30%</span>
-                                </div>
-                                <div class="w-full bg-slate-100 rounded-full h-4 overflow-hidden">
-                                    <div class="bg-slate-400 h-4 rounded-full w-[40%]"></div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between text-sm mb-1">
-                                    <span class="font-medium text-slate-600">No Website</span>
-                                    <span class="text-red-500 font-bold">Losing Clients</span>
-                                </div>
-                                <div class="w-full bg-slate-100 rounded-full h-4 overflow-hidden">
-                                    <div class="bg-red-400 h-4 rounded-full w-[15%]"></div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-8 p-4 bg-blue-50 rounded-xl border border-blue-100 flex gap-3 items-center">
-                            <i class="fa-solid fa-circle-info text-brand-blue text-xl"></i>
-                            <p class="text-sm text-slate-700 font-medium">Businesses with optimized websites grow 2x faster than those without.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Social Proof Section -->
-    <section class="py-16 reveal">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="premium-card p-6 text-center relative overflow-hidden group">
-                    <div class="text-4xl font-bold text-brand-blue mb-2 counter">50+</div>
-                    <p class="text-slate-500 font-medium">Websites Delivered</p>
-                </div>
-                <div class="premium-card p-6 text-center relative overflow-hidden group">
-                    <div class="text-4xl font-bold text-brand-cyan mb-2">100%</div>
-                    <p class="text-slate-500 font-medium">Mobile Responsive</p>
-                </div>
-                <div class="premium-card p-6 text-center relative overflow-hidden group">
-                    <div class="text-4xl font-bold text-brand-purple mb-2">3 Days</div>
-                    <p class="text-slate-500 font-medium">Fast Delivery</p>
-                </div>
-                <div class="premium-card p-6 text-center relative overflow-hidden group">
-                    <div class="text-4xl font-bold text-green-500 mb-2"><i class="fa-solid fa-check"></i></div>
-                    <p class="text-slate-500 font-medium">SEO & WhatsApp Ready</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Process Section -->
-    <section id="process" class="py-24 relative reveal">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-20">
-                <h2 class="text-3xl md:text-5xl font-bold text-brand-navy mb-4">How It <span class="text-brand-purple">Works</span></h2>
-                <p class="text-lg text-slate-600">A seamless, headache-free process from start to launch.</p>
-            </div>
-
-            <div class="relative timeline-line">
-                <!-- Step 1 -->
-                <div class="timeline-item relative w-1/2 pr-12 text-right mb-16 ml-0">
-                    <div class="timeline-icon absolute top-0 right-0 transform translate-x-1/2 w-12 h-12 rounded-full bg-white border-4 border-brand-blue flex items-center justify-center text-brand-blue font-bold z-10 shadow-lg shadow-blue-500/20">1</div>
-                    <h3 class="text-2xl font-bold text-slate-800 mb-2">Contact Us</h3>
-                    <p class="text-slate-500">Reach out via WhatsApp or our contact form. Tell us what your business does and pick a plan.</p>
-                </div>
-                <!-- Step 2 -->
-                <div class="timeline-item relative w-1/2 pl-12 text-left mb-16 ml-auto">
-                    <div class="timeline-icon absolute top-0 left-0 transform -translate-x-1/2 w-12 h-12 rounded-full bg-white border-4 border-brand-cyan flex items-center justify-center text-brand-cyan font-bold z-10 shadow-lg shadow-cyan-500/20">2</div>
-                    <h3 class="text-2xl font-bold text-slate-800 mb-2">Send Details</h3>
-                    <p class="text-slate-500">Provide basic info like your services, address, photos, and any specific preferences.</p>
-                </div>
-                <!-- Step 3 -->
-                <div class="timeline-item relative w-1/2 pr-12 text-right mb-16 ml-0">
-                    <div class="timeline-icon absolute top-0 right-0 transform translate-x-1/2 w-12 h-12 rounded-full bg-white border-4 border-brand-purple flex items-center justify-center text-brand-purple font-bold z-10 shadow-lg shadow-purple-500/20">3</div>
-                    <h3 class="text-2xl font-bold text-slate-800 mb-2">Website Creation</h3>
-                    <p class="text-slate-500">Our experts design your premium website within 3-5 days, fully optimized for mobile and SEO.</p>
-                </div>
-                <!-- Step 4 -->
-                <div class="timeline-item relative w-1/2 pl-12 text-left ml-auto">
-                    <div class="timeline-icon absolute top-0 left-0 transform -translate-x-1/2 w-12 h-12 rounded-full bg-brand-blue flex items-center justify-center text-white font-bold z-10 shadow-lg shadow-blue-500/40">
-                        <i class="fa-solid fa-rocket"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-slate-800 mb-2">Launch Online!</h3>
-                    <p class="text-slate-500">You review the site. We make final tweaks, connect your domain, and launch it to the world.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section id="pricing" class="py-24 relative bg-slate-50/50 reveal">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-5xl font-bold text-brand-navy mb-4">Simple, Transparent <span class="glow-text">Pricing</span></h2>
-                <p class="text-lg text-slate-600">Premium startup-quality websites at local business prices.</p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8 items-center max-w-6xl mx-auto">
-                <!-- Starter Plan -->
-                <div class="premium-card p-8">
-                    <h3 class="text-xl font-bold text-slate-800 mb-2">Starter Plan</h3>
-                    <div class="flex items-end gap-1 mb-6">
-                        <span class="text-4xl font-bold text-brand-navy">₹1,999</span>
-                    </div>
-                    <p class="text-slate-500 text-sm mb-6 border-b border-slate-100 pb-6">Perfect for small clinics or startups needing a quick online presence.</p>
-                    <ul class="space-y-4 mb-8">
-                        <li class="flex items-center gap-3 text-sm text-slate-700"><i class="fa-solid fa-check text-green-500"></i> Single-page premium website</li>
-                        <li class="flex items-center gap-3 text-sm text-slate-700"><i class="fa-solid fa-check text-green-500"></i> Mobile Responsive</li>
-                        <li class="flex items-center gap-3 text-sm text-slate-700"><i class="fa-solid fa-check text-green-500"></i> WhatsApp Integration</li>
-                        <li class="flex items-center gap-3 text-sm text-slate-700"><i class="fa-solid fa-check text-green-500"></i> Google Maps Setup</li>
-                        <li class="flex items-center gap-3 text-sm text-slate-700"><i class="fa-solid fa-check text-green-500"></i> Basic SEO Setup</li>
-                        <li class="flex items-center gap-3 text-sm text-slate-700"><i class="fa-solid fa-check text-green-500"></i> 2 Free minor edits/month</li>
-                    </ul>
-                    <a href="#contact" class="block w-full py-3 px-4 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-center rounded-xl transition-colors border border-slate-200">Choose Starter</a>
-                </div>
-
-                <!-- Professional Plan -->
-                <div class="premium-card p-8 relative transform md:-translate-y-4 border-2 border-brand-blue shadow-2xl shadow-blue-500/20">
-                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-brand-blue to-brand-cyan text-white px-4 py-1 rounded-full text-sm font-bold shadow-lg">
-                        Most Popular
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-800 mb-2">Professional Plan</h3>
-                    <div class="flex items-end gap-1 mb-6">
-                        <span class="text-4xl font-bold text-brand-navy">₹6,999</span>
-                    </div>
-                    <p class="text-slate-500 text-sm mb-6 border-b border-slate-100 pb-6">Ideal for growing businesses wanting multiple pages and advanced design.</p>
-                    <ul class="space-y-4 mb-8">
-                        <li class="flex items-center gap-3 text-sm text-slate-800 font-medium"><i class="fa-solid fa-check text-brand-blue"></i> Multi-page website (Up to 5)</li>
-                        <li class="flex items-center gap-3 text-sm text-slate-800 font-medium"><i class="fa-solid fa-check text-brand-blue"></i> Premium UI/UX Design</li>
-                        <li class="flex items-center gap-3 text-sm text-slate-800 font-medium"><i class="fa-solid fa-check text-brand-blue"></i> Smooth Animations</li>
-                        <li class="flex items-center gap-3 text-sm text-slate-800 font-medium"><i class="fa-solid fa-check text-brand-blue"></i> Advanced SEO</li>
-                        <li class="flex items-center gap-3 text-sm text-slate-800 font-medium"><i class="fa-solid fa-check text-brand-blue"></i> Faster Performance</li>
-                        <li class="flex items-center gap-3 text-sm text-slate-800 font-medium"><i class="fa-solid fa-check text-brand-blue"></i> Everything in Starter</li>
-                    </ul>
-                    <a href="#contact" class="glow-button block w-full py-3 px-4 text-white font-bold text-center rounded-xl transition-transform text-lg shadow-md">Get Professional</a>
-                </div>
-
-                <!-- Premium Plan -->
-                <div class="premium-card p-8">
-                    <h3 class="text-xl font-bold text-slate-800 mb-2">Premium Plan</h3>
-                    <div class="flex items-end gap-1 mb-6">
-                        <span class="text-4xl font-bold text-brand-navy">₹15,000<span class="text-lg text-slate-400">+</span></span>
-                    </div>
-                    <p class="text-slate-500 text-sm mb-6 border-b border-slate-100 pb-6">For larger clinics or businesses requiring custom systems.</p>
-                    <ul class="space-y-4 mb-8">
-                        <li class="flex items-center gap-3 text-sm text-slate-700"><i class="fa-solid fa-check text-brand-purple"></i> Custom UI/UX & Branding</li>
-                        <li class="flex items-center gap-3 text-sm text-slate-700"><i class="fa-solid fa-check text-brand-purple"></i> Booking Systems</li>
-                        <li class="flex items-center gap-3 text-sm text-slate-700"><i class="fa-solid fa-check text-brand-purple"></i> Dashboard Integration</li>
-                        <li class="flex items-center gap-3 text-sm text-slate-700"><i class="fa-solid fa-check text-brand-purple"></i> Premium Animations</li>
-                        <li class="flex items-center gap-3 text-sm text-slate-700"><i class="fa-solid fa-check text-brand-purple"></i> Priority Maintenance</li>
-                        <li class="flex items-center gap-3 text-sm text-slate-700"><i class="fa-solid fa-check text-brand-purple"></i> Everything in Pro</li>
-                    </ul>
-                    <a href="#contact" class="block w-full py-3 px-4 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-center rounded-xl transition-colors border border-slate-200">Request Quote</a>
-                </div>
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6">
+                Professional Medical Websites <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Starting at ₹299/year</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed">
+                Helping doctors, clinics, dentists, psychologists, physiotherapists, and healthcare professionals establish a strong online presence effortlessly.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mb-14">
+                <a href="#builder" class="bg-gradient-brand text-white px-8 py-4 rounded-full font-bold shadow-[0_0_40px_rgba(37,99,235,0.4)] hover:scale-105 transition-transform flex items-center justify-center gap-2 text-lg">
+                    Get My Website <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="#features" class="bg-white/10 text-white border border-white/20 px-8 py-4 rounded-full font-bold hover:bg-white/20 transition-colors flex items-center justify-center gap-2 text-lg backdrop-blur-md">
+                    View Features
+                </a>
             </div>
             
-            <!-- Free Bonus Highlight -->
-            <div class="mt-12 max-w-3xl mx-auto premium-card bg-gradient-to-r from-blue-50 to-indigo-50 border-brand-blue/30 p-6 flex flex-col sm:flex-row items-center justify-center gap-4 text-center sm:text-left">
-                <div class="w-12 h-12 rounded-full bg-brand-blue text-white flex items-center justify-center text-xl shrink-0">
-                    <i class="fa-solid fa-gift"></i>
+            <!-- Trust Badges -->
+            <div class="flex flex-wrap justify-center items-center gap-4 md:gap-8 text-sm md:text-base font-medium text-slate-300">
+                <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-green-400"></i> Mobile Friendly</div>
+                <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-green-400"></i> Google Search Optimized</div>
+                <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-green-400"></i> WhatsApp Booking</div>
+                <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-green-400"></i> Professional Design</div>
+                <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-green-400"></i> Fast Setup</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Every Doctor Needs a Website -->
+    <section id="why-us" class="py-24 bg-brand-light reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold text-brand-dark mb-4">Why Every Doctor Needs a Website</h2>
+                <p class="text-slate-600 max-w-2xl mx-auto text-lg">In today's digital age, your patients are looking for you online. Don't miss out on establishing authority and growing your practice.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-300 group">
+                    <div class="w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center text-brand-blue text-2xl mb-6 group-hover:bg-brand-blue group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3">Patients search online</h3>
+                    <p class="text-slate-600">80% of patients research a doctor or clinic online before booking an appointment.</p>
                 </div>
-                <div>
-                    <h4 class="font-bold text-slate-800 text-lg">FREE BONUS: Google Business Profile Setup</h4>
-                    <p class="text-slate-600 text-sm">Sign up for any plan today, and we'll guide you on setting up your Google Business listing to rank higher locally!</p>
+                <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-300 group">
+                    <div class="w-14 h-14 rounded-2xl bg-cyan-100 flex items-center justify-center text-brand-cyan text-2xl mb-6 group-hover:bg-brand-cyan group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3">Build trust instantly</h3>
+                    <p class="text-slate-600">A professional website acts as your digital clinic, showcasing your credentials and building immediate patient trust.</p>
                 </div>
+                <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-300 group">
+                    <div class="w-14 h-14 rounded-2xl bg-green-100 flex items-center justify-center text-green-600 text-2xl mb-6 group-hover:bg-green-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-calendar-check"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3">Increase appointments</h3>
+                    <p class="text-slate-600">Direct WhatsApp integration turns profile visitors into booked appointments effortlessly.</p>
+                </div>
+                <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-300 group">
+                    <div class="w-14 h-14 rounded-2xl bg-red-100 flex items-center justify-center text-red-500 text-2xl mb-6 group-hover:bg-red-500 group-hover:text-white transition-colors">
+                        <i class="fa-brands fa-google"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3">Appear on Google Search</h3>
+                    <p class="text-slate-600">Rank for local searches like "Best doctor near me" and attract organic traffic to your clinic.</p>
+                </div>
+                <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-300 group">
+                    <div class="w-14 h-14 rounded-2xl bg-purple-100 flex items-center justify-center text-purple-600 text-2xl mb-6 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3">Available 24/7</h3>
+                    <p class="text-slate-600">Your website works around the clock, providing vital clinic information, timings, and services even when you are closed.</p>
+                </div>
+                <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-300 group">
+                    <div class="w-14 h-14 rounded-2xl bg-amber-100 flex items-center justify-center text-amber-500 text-2xl mb-6 group-hover:bg-amber-500 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3">Professional branding</h3>
+                    <p class="text-slate-600">Stand out from competitors with a premium, bespoke digital identity that reflects your expertise.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Base Pricing Section -->
+    <section id="pricing" class="py-24 bg-white reveal">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-5xl font-bold text-brand-dark mb-10">Start with the Essentials</h2>
+            
+            <div class="bg-gradient-brand p-1 rounded-[2.5rem] shadow-2xl shadow-brand-blue/20 hover:scale-[1.02] transition-transform duration-500 relative">
+                <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-brand-dark text-white px-6 py-2 rounded-full font-bold text-sm shadow-lg whitespace-nowrap">
+                    ⭐ THE BASE PACKAGE
+                </div>
+                <div class="bg-white rounded-[2.4rem] p-10 md:p-14 text-left">
+                    <div class="flex flex-col md:flex-row justify-between items-center border-b border-slate-100 pb-8 mb-8 gap-6">
+                        <div>
+                            <h3 class="text-3xl font-bold text-brand-dark">Professional Medical Website</h3>
+                            <p class="text-slate-500 mt-2 text-lg">Everything you need to get your clinic online today.</p>
+                        </div>
+                        <div class="text-right shrink-0">
+                            <span class="block text-sm font-bold text-slate-400 uppercase tracking-widest">Starting at</span>
+                            <span class="text-5xl font-extrabold text-brand-blue">₹299<span class="text-xl text-slate-400 font-medium">/year</span></span>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-y-4 gap-x-8 mb-10 text-slate-700 font-medium text-lg">
+                        <div class="flex items-center gap-3"><div class="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center text-green-600 shrink-0"><i class="fa-solid fa-check text-xs"></i></div> Professional Doctor Profile</div>
+                        <div class="flex items-center gap-3"><div class="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center text-green-600 shrink-0"><i class="fa-solid fa-check text-xs"></i></div> Services Section</div>
+                        <div class="flex items-center gap-3"><div class="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center text-green-600 shrink-0"><i class="fa-solid fa-check text-xs"></i></div> WhatsApp Contact Button</div>
+                        <div class="flex items-center gap-3"><div class="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center text-green-600 shrink-0"><i class="fa-solid fa-check text-xs"></i></div> Conditions Treated</div>
+                        <div class="flex items-center gap-3"><div class="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center text-green-600 shrink-0"><i class="fa-solid fa-check text-xs"></i></div> Basic SEO Setup</div>
+                        <div class="flex items-center gap-3"><div class="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center text-green-600 shrink-0"><i class="fa-solid fa-check text-xs"></i></div> Contact Information</div>
+                        <div class="flex items-center gap-3"><div class="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center text-green-600 shrink-0"><i class="fa-solid fa-check text-xs"></i></div> Secure Hosting Setup</div>
+                        <div class="flex items-center gap-3"><div class="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center text-green-600 shrink-0"><i class="fa-solid fa-check text-xs"></i></div> Mobile Responsive Design</div>
+                    </div>
+                    
+                    <a href="#builder" class="block w-full text-center bg-brand-dark text-white py-5 rounded-2xl font-bold text-xl hover:bg-slate-800 transition-colors shadow-lg">
+                        Get Started Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Features Section -->
+    <section id="features" class="py-24 bg-brand-light reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold text-brand-dark mb-4">Powerful Premium Add-ons</h2>
+                <p class="text-slate-600 max-w-2xl mx-auto text-lg">Customize your website with powerful tools designed to automate your practice and attract more patients.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Smart Patient Form -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 relative overflow-hidden group hover:border-brand-blue hover:shadow-lg transition-all">
+                    <div class="absolute top-0 right-0 bg-brand-blue text-white text-xs font-bold px-3 py-1 rounded-bl-lg">⭐ Recommended</div>
+                    <div class="text-brand-blue text-3xl mb-4"><i class="fa-solid fa-clipboard-list"></i></div>
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-bold text-lg text-brand-dark leading-tight pr-4">Smart Patient Form + WhatsApp</h3>
+                        <span class="font-bold text-brand-cyan shrink-0">₹99</span>
+                    </div>
+                    <p class="text-sm text-slate-500">Capture patient details automatically and receive inquiries directly on WhatsApp.</p>
+                </div>
+
+                <!-- Floating WA -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 relative overflow-hidden group hover:border-brand-blue hover:shadow-lg transition-all">
+                    <div class="absolute top-0 right-0 bg-[#25D366] text-white text-xs font-bold px-3 py-1 rounded-bl-lg">⭐ Most Selected</div>
+                    <div class="text-[#25D366] text-3xl mb-4"><i class="fa-brands fa-whatsapp"></i></div>
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-bold text-lg text-brand-dark leading-tight pr-4">Floating WhatsApp Button</h3>
+                        <span class="font-bold text-brand-cyan shrink-0">₹99</span>
+                    </div>
+                    <p class="text-sm text-slate-500">Allow patients to contact your clinic instantly from any page.</p>
+                </div>
+
+                <!-- Blog -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 relative overflow-hidden group hover:border-brand-blue hover:shadow-lg transition-all">
+                    <div class="absolute top-0 right-0 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">🔥 Long-Term Growth</div>
+                    <div class="text-orange-500 text-3xl mb-4"><i class="fa-solid fa-newspaper"></i></div>
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-bold text-lg text-brand-dark leading-tight pr-4">Health Articles / Blog</h3>
+                        <span class="font-bold text-brand-cyan shrink-0">₹99</span>
+                    </div>
+                    <p class="text-sm text-slate-500">Rank on Google and attract new patients organically.</p>
+                </div>
+
+                <!-- Prescription Generator -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 relative overflow-hidden group hover:border-brand-blue hover:shadow-lg transition-all">
+                    <div class="absolute top-0 right-0 bg-purple-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">🔥 Productivity Booster</div>
+                    <div class="text-purple-500 text-3xl mb-4"><i class="fa-solid fa-file-prescription"></i></div>
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-bold text-lg text-brand-dark leading-tight pr-4">Online Prescription Generator</h3>
+                        <span class="font-bold text-brand-cyan shrink-0">₹499</span>
+                    </div>
+                    <p class="text-sm text-slate-500">Generate digital prescriptions from any device.</p>
+                </div>
+
+                <!-- Reviews -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 relative overflow-hidden group hover:border-brand-blue hover:shadow-lg transition-all">
+                    <div class="absolute top-0 right-0 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">⭐ High Conversion</div>
+                    <div class="text-amber-500 text-3xl mb-4"><i class="fa-solid fa-star"></i></div>
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-bold text-lg text-brand-dark leading-tight pr-4">Patient Reviews Section</h3>
+                        <span class="font-bold text-brand-cyan shrink-0">₹99</span>
+                    </div>
+                    <p class="text-sm text-slate-500">Display social proof and build trust instantly.</p>
+                </div>
+
+                <!-- Google Maps -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 group hover:border-brand-blue hover:shadow-lg transition-all">
+                    <div class="text-red-500 text-3xl mb-4"><i class="fa-solid fa-map-location-dot"></i></div>
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-bold text-lg text-brand-dark leading-tight pr-4">Advanced Google Maps</h3>
+                        <span class="font-bold text-brand-cyan shrink-0">₹99</span>
+                    </div>
+                    <p class="text-sm text-slate-500">Make it easier for patients to locate your clinic.</p>
+                </div>
+
+                <!-- Before & After -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 group hover:border-brand-blue hover:shadow-lg transition-all">
+                    <div class="text-indigo-500 text-3xl mb-4"><i class="fa-solid fa-image-portrait"></i></div>
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-bold text-lg text-brand-dark leading-tight pr-4">Before & After Gallery</h3>
+                        <span class="font-bold text-brand-cyan shrink-0">₹99</span>
+                    </div>
+                    <p class="text-sm text-slate-500">Perfect for dermatology, cosmetic, and dental practices.</p>
+                </div>
+
+                <!-- Online Payment -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 group hover:border-brand-blue hover:shadow-lg transition-all">
+                    <div class="text-emerald-500 text-3xl mb-4"><i class="fa-solid fa-credit-card"></i></div>
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-bold text-lg text-brand-dark leading-tight pr-4">Online Payment Option</h3>
+                        <span class="font-bold text-brand-cyan shrink-0">₹99</span>
+                    </div>
+                    <p class="text-sm text-slate-500">Accept consultation fees and booking payments online.</p>
+                </div>
+
+                <!-- FAQ Section -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 group hover:border-brand-blue hover:shadow-lg transition-all">
+                    <div class="text-sky-500 text-3xl mb-4"><i class="fa-solid fa-circle-question"></i></div>
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-bold text-lg text-brand-dark leading-tight pr-4">FAQ Section</h3>
+                        <span class="font-bold text-brand-cyan shrink-0">₹99</span>
+                    </div>
+                    <p class="text-sm text-slate-500">Reduce repetitive patient calls by answering common queries.</p>
+                </div>
+
+                <!-- Premium Logo -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 group hover:border-brand-blue hover:shadow-lg transition-all">
+                    <div class="text-pink-500 text-3xl mb-4"><i class="fa-solid fa-pen-nib"></i></div>
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-bold text-lg text-brand-dark leading-tight pr-4">Premium Logo Design</h3>
+                        <span class="font-bold text-brand-cyan shrink-0">₹99</span>
+                    </div>
+                    <p class="text-sm text-slate-500">Professional healthcare-focused custom logo design.</p>
+                </div>
+
+                <!-- Social Media -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 group hover:border-brand-blue hover:shadow-lg transition-all">
+                    <div class="text-blue-400 text-3xl mb-4"><i class="fa-solid fa-share-nodes"></i></div>
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-bold text-lg text-brand-dark leading-tight pr-4">Social Media Integration</h3>
+                        <span class="font-bold text-brand-cyan shrink-0">₹99</span>
+                    </div>
+                    <p class="text-sm text-slate-500">Connect Facebook, Instagram, LinkedIn and YouTube.</p>
+                </div>
+
+                <!-- Image Gallery -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 group hover:border-brand-blue hover:shadow-lg transition-all">
+                    <div class="text-teal-500 text-3xl mb-4"><i class="fa-solid fa-images"></i></div>
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-bold text-lg text-brand-dark leading-tight pr-4">Image Gallery</h3>
+                        <span class="font-bold text-brand-cyan shrink-0">₹299</span>
+                    </div>
+                    <p class="text-sm text-slate-500">Showcase your clinic facilities, equipment, and staff.</p>
+                </div>
+
+                <!-- Custom Domain -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 group hover:border-brand-blue hover:shadow-lg transition-all md:col-span-2 lg:col-span-3">
+                    <div class="flex flex-col md:flex-row items-center gap-6">
+                        <div class="w-16 h-16 rounded-full bg-slate-100 flex items-center justify-center text-slate-700 text-2xl shrink-0"><i class="fa-solid fa-globe"></i></div>
+                        <div class="flex-grow text-center md:text-left">
+                            <div class="flex flex-col md:flex-row justify-between items-center mb-1">
+                                <h3 class="font-bold text-xl text-brand-dark">Custom Domain Setup</h3>
+                                <span class="font-bold text-brand-cyan text-xl">₹999/year</span>
+                            </div>
+                            <p class="text-sm text-slate-500 mb-2">Professional domain setup. Build absolute authority with your own web address.</p>
+                            <div class="flex flex-wrap justify-center md:justify-start gap-2 mt-2">
+                                <span class="bg-slate-100 px-3 py-1 rounded text-xs font-mono text-slate-600">www.drjohn.com</span>
+                                <span class="bg-slate-100 px-3 py-1 rounded text-xs font-mono text-slate-600">www.clinicname.in</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="py-24 bg-white reveal">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-5xl font-bold text-brand-dark mb-4">Compare Plans</h2>
+            </div>
+            
+            <div class="overflow-x-auto rounded-3xl border border-slate-200 shadow-sm">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr>
+                            <th class="p-6 bg-slate-50 font-bold text-slate-700 text-lg border-b border-slate-200 w-1/3">Feature</th>
+                            <th class="p-6 bg-white font-bold text-center text-brand-dark text-lg border-b border-slate-200 w-1/3 border-l border-r">Base Website</th>
+                            <th class="p-6 bg-gradient-brand font-bold text-center text-white text-lg border-b border-blue-600 w-1/3">Premium Website</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-slate-600">
+                        <tr>
+                            <td class="p-6 border-b border-slate-100 font-medium">Mobile Friendly</td>
+                            <td class="p-6 border-b border-slate-100 border-l border-r text-center text-green-500"><i class="fa-solid fa-check"></i></td>
+                            <td class="p-6 border-b border-slate-100 text-center text-green-500"><i class="fa-solid fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="p-6 border-b border-slate-100 font-medium bg-slate-50">WhatsApp Integration</td>
+                            <td class="p-6 border-b border-slate-100 border-l border-r text-center text-green-500 bg-white"><i class="fa-solid fa-check"></i></td>
+                            <td class="p-6 border-b border-slate-100 text-center text-green-500 bg-slate-50"><i class="fa-solid fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="p-6 border-b border-slate-100 font-medium">SEO Setup</td>
+                            <td class="p-6 border-b border-slate-100 border-l border-r text-center text-green-500"><i class="fa-solid fa-check"></i></td>
+                            <td class="p-6 border-b border-slate-100 text-center text-green-500"><i class="fa-solid fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="p-6 border-b border-slate-100 font-medium bg-slate-50">Appointment Booking</td>
+                            <td class="p-6 border-b border-slate-100 border-l border-r text-center text-slate-300 bg-white"><i class="fa-solid fa-minus"></i></td>
+                            <td class="p-6 border-b border-slate-100 text-center text-green-500 bg-slate-50"><i class="fa-solid fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="p-6 border-b border-slate-100 font-medium">Reviews Section</td>
+                            <td class="p-6 border-b border-slate-100 border-l border-r text-center text-slate-300"><i class="fa-solid fa-minus"></i></td>
+                            <td class="p-6 border-b border-slate-100 text-center text-green-500"><i class="fa-solid fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="p-6 border-b border-slate-100 font-medium bg-slate-50">Blog</td>
+                            <td class="p-6 border-b border-slate-100 border-l border-r text-center text-slate-300 bg-white"><i class="fa-solid fa-minus"></i></td>
+                            <td class="p-6 border-b border-slate-100 text-center text-green-500 bg-slate-50"><i class="fa-solid fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="p-6 font-medium">Prescription Generator</td>
+                            <td class="p-6 border-l border-r text-center text-slate-300"><i class="fa-solid fa-minus"></i></td>
+                            <td class="p-6 text-center text-green-500"><i class="fa-solid fa-check"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Builder / Form -->
+    <section id="builder" class="py-24 bg-slate-900 reveal relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Build Your Clinic Profile</h2>
+                <p class="text-slate-400 text-lg">Fill in your details, select features, and calculate your exact cost.</p>
+            </div>
+
+            <form id="doctorForm" class="space-y-8">
+                <!-- Section 1: Details -->
+                <div class="bg-white rounded-3xl p-8 shadow-xl">
+                    <h3 class="text-xl font-bold text-brand-dark mb-6 flex items-center gap-3 border-b border-slate-100 pb-4"><div class="w-8 h-8 rounded-full bg-blue-100 text-brand-blue flex items-center justify-center text-sm">1</div> Doctor Details</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Full Name (with Title)</label>
+                            <input type="text" placeholder="e.g. Dr. John Doe" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Qualification</label>
+                            <input type="text" placeholder="e.g. MBBS, MD" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Registration Number</label>
+                            <input type="text" placeholder="Medical Council Reg No." class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Speciality</label>
+                            <input type="text" placeholder="e.g. Cardiologist" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Sub-speciality (Optional)</label>
+                            <input type="text" placeholder="e.g. Interventional Cardiology" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Years of Experience</label>
+                            <input type="number" placeholder="e.g. 10" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Clinic Name</label>
+                            <input type="text" placeholder="Name of your practice" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Tagline (Optional)</label>
+                            <input type="text" placeholder="e.g. Healing Hearts with Care" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 2: Contact -->
+                <div class="bg-white rounded-3xl p-8 shadow-xl">
+                    <h3 class="text-xl font-bold text-brand-dark mb-6 flex items-center gap-3 border-b border-slate-100 pb-4"><div class="w-8 h-8 rounded-full bg-blue-100 text-brand-blue flex items-center justify-center text-sm">2</div> Contact Details</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Phone Number</label>
+                            <input type="tel" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">WhatsApp Number</label>
+                            <input type="tel" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Email</label>
+                            <input type="email" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Google Maps Link</label>
+                            <input type="url" placeholder="Paste map URL here" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors">
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Complete Address</label>
+                            <textarea rows="2" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 3 & 4: Medical Details -->
+                <div class="bg-white rounded-3xl p-8 shadow-xl">
+                    <h3 class="text-xl font-bold text-brand-dark mb-6 flex items-center gap-3 border-b border-slate-100 pb-4"><div class="w-8 h-8 rounded-full bg-blue-100 text-brand-blue flex items-center justify-center text-sm">3</div> Practice Information</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Services Offered</label>
+                            <textarea rows="4" placeholder="List your key services, separated by commas..." class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors"></textarea>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Conditions Treated</label>
+                            <textarea rows="4" placeholder="List conditions you treat..." class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 5: Social Media -->
+                <div class="bg-white rounded-3xl p-8 shadow-xl">
+                    <h3 class="text-xl font-bold text-brand-dark mb-6 flex items-center gap-3 border-b border-slate-100 pb-4"><div class="w-8 h-8 rounded-full bg-blue-100 text-brand-blue flex items-center justify-center text-sm">4</div> Social Media Links</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="relative">
+                            <i class="fa-brands fa-facebook absolute left-4 top-3.5 text-slate-400 text-lg"></i>
+                            <input type="url" placeholder="Facebook Profile URL" class="w-full pl-11 pr-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors">
+                        </div>
+                        <div class="relative">
+                            <i class="fa-brands fa-instagram absolute left-4 top-3.5 text-slate-400 text-lg"></i>
+                            <input type="url" placeholder="Instagram Profile URL" class="w-full pl-11 pr-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors">
+                        </div>
+                        <div class="relative">
+                            <i class="fa-brands fa-linkedin absolute left-4 top-3.5 text-slate-400 text-lg"></i>
+                            <input type="url" placeholder="LinkedIn Profile URL" class="w-full pl-11 pr-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors">
+                        </div>
+                        <div class="relative">
+                            <i class="fa-brands fa-youtube absolute left-4 top-3.5 text-slate-400 text-lg"></i>
+                            <input type="url" placeholder="YouTube Channel URL" class="w-full pl-11 pr-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 6: Feature Selection (Calculator) -->
+                <div class="bg-brand-light rounded-3xl p-8 shadow-xl border-4 border-brand-cyan relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-brand-cyan text-white text-sm font-bold px-6 py-2 rounded-bl-2xl shadow-lg">LIVE CALCULATOR</div>
+                    <h3 class="text-2xl font-extrabold text-brand-dark mb-2">Select Premium Features</h3>
+                    <p class="text-slate-500 mb-8">Base Website included (₹299/year). Select additional features below:</p>
+                    
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+                        <!-- Addon Checkboxes -->
+                        <label class="relative cursor-pointer group">
+                            <input type="checkbox" class="feature-checkbox peer sr-only" data-price="99">
+                            <div class="bg-white border-2 border-slate-200 p-4 rounded-xl transition-all h-full">
+                                <div class="flex justify-between items-start mb-1">
+                                    <span class="font-bold text-brand-dark">Smart Form + WA</span>
+                                    <span class="text-brand-blue font-bold">+₹99</span>
+                                </div>
+                                <div class="check-icon absolute top-4 right-4 text-brand-blue opacity-0 transform scale-50 transition-all"><i class="fa-solid fa-circle-check text-xl"></i></div>
+                            </div>
+                        </label>
+                        
+                        <label class="relative cursor-pointer group">
+                            <input type="checkbox" class="feature-checkbox peer sr-only" data-price="99">
+                            <div class="bg-white border-2 border-slate-200 p-4 rounded-xl transition-all h-full">
+                                <div class="flex justify-between items-start mb-1">
+                                    <span class="font-bold text-brand-dark">Floating WhatsApp</span>
+                                    <span class="text-brand-blue font-bold">+₹99</span>
+                                </div>
+                                <div class="check-icon absolute top-4 right-4 text-brand-blue opacity-0 transform scale-50 transition-all"><i class="fa-solid fa-circle-check text-xl"></i></div>
+                            </div>
+                        </label>
+                        
+                        <label class="relative cursor-pointer group">
+                            <input type="checkbox" class="feature-checkbox peer sr-only" data-price="99">
+                            <div class="bg-white border-2 border-slate-200 p-4 rounded-xl transition-all h-full">
+                                <div class="flex justify-between items-start mb-1">
+                                    <span class="font-bold text-brand-dark">Advanced Google Maps</span>
+                                    <span class="text-brand-blue font-bold">+₹99</span>
+                                </div>
+                                <div class="check-icon absolute top-4 right-4 text-brand-blue opacity-0 transform scale-50 transition-all"><i class="fa-solid fa-circle-check text-xl"></i></div>
+                            </div>
+                        </label>
+
+                        <label class="relative cursor-pointer group">
+                            <input type="checkbox" class="feature-checkbox peer sr-only" data-price="99">
+                            <div class="bg-white border-2 border-slate-200 p-4 rounded-xl transition-all h-full">
+                                <div class="flex justify-between items-start mb-1">
+                                    <span class="font-bold text-brand-dark">Health Articles/Blog</span>
+                                    <span class="text-brand-blue font-bold">+₹99</span>
+                                </div>
+                                <div class="check-icon absolute top-4 right-4 text-brand-blue opacity-0 transform scale-50 transition-all"><i class="fa-solid fa-circle-check text-xl"></i></div>
+                            </div>
+                        </label>
+
+                        <label class="relative cursor-pointer group">
+                            <input type="checkbox" class="feature-checkbox peer sr-only" data-price="99">
+                            <div class="bg-white border-2 border-slate-200 p-4 rounded-xl transition-all h-full">
+                                <div class="flex justify-between items-start mb-1">
+                                    <span class="font-bold text-brand-dark">Before & After Gallery</span>
+                                    <span class="text-brand-blue font-bold">+₹99</span>
+                                </div>
+                                <div class="check-icon absolute top-4 right-4 text-brand-blue opacity-0 transform scale-50 transition-all"><i class="fa-solid fa-circle-check text-xl"></i></div>
+                            </div>
+                        </label>
+
+                        <label class="relative cursor-pointer group">
+                            <input type="checkbox" class="feature-checkbox peer sr-only" data-price="99">
+                            <div class="bg-white border-2 border-slate-200 p-4 rounded-xl transition-all h-full">
+                                <div class="flex justify-between items-start mb-1">
+                                    <span class="font-bold text-brand-dark">Online Payment</span>
+                                    <span class="text-brand-blue font-bold">+₹99</span>
+                                </div>
+                                <div class="check-icon absolute top-4 right-4 text-brand-blue opacity-0 transform scale-50 transition-all"><i class="fa-solid fa-circle-check text-xl"></i></div>
+                            </div>
+                        </label>
+
+                        <label class="relative cursor-pointer group">
+                            <input type="checkbox" class="feature-checkbox peer sr-only" data-price="499">
+                            <div class="bg-white border-2 border-slate-200 p-4 rounded-xl transition-all h-full">
+                                <div class="flex justify-between items-start mb-1">
+                                    <span class="font-bold text-brand-dark">Prescription Gen.</span>
+                                    <span class="text-purple-600 font-bold">+₹499</span>
+                                </div>
+                                <div class="check-icon absolute top-4 right-4 text-brand-blue opacity-0 transform scale-50 transition-all"><i class="fa-solid fa-circle-check text-xl"></i></div>
+                            </div>
+                        </label>
+
+                        <label class="relative cursor-pointer group">
+                            <input type="checkbox" class="feature-checkbox peer sr-only" data-price="99">
+                            <div class="bg-white border-2 border-slate-200 p-4 rounded-xl transition-all h-full">
+                                <div class="flex justify-between items-start mb-1">
+                                    <span class="font-bold text-brand-dark">FAQ Section</span>
+                                    <span class="text-brand-blue font-bold">+₹99</span>
+                                </div>
+                                <div class="check-icon absolute top-4 right-4 text-brand-blue opacity-0 transform scale-50 transition-all"><i class="fa-solid fa-circle-check text-xl"></i></div>
+                            </div>
+                        </label>
+
+                        <label class="relative cursor-pointer group">
+                            <input type="checkbox" class="feature-checkbox peer sr-only" data-price="99">
+                            <div class="bg-white border-2 border-slate-200 p-4 rounded-xl transition-all h-full">
+                                <div class="flex justify-between items-start mb-1">
+                                    <span class="font-bold text-brand-dark">Premium Logo</span>
+                                    <span class="text-brand-blue font-bold">+₹99</span>
+                                </div>
+                                <div class="check-icon absolute top-4 right-4 text-brand-blue opacity-0 transform scale-50 transition-all"><i class="fa-solid fa-circle-check text-xl"></i></div>
+                            </div>
+                        </label>
+                        
+                        <label class="relative cursor-pointer group">
+                            <input type="checkbox" class="feature-checkbox peer sr-only" data-price="99">
+                            <div class="bg-white border-2 border-slate-200 p-4 rounded-xl transition-all h-full">
+                                <div class="flex justify-between items-start mb-1">
+                                    <span class="font-bold text-brand-dark">Social Media Int.</span>
+                                    <span class="text-brand-blue font-bold">+₹99</span>
+                                </div>
+                                <div class="check-icon absolute top-4 right-4 text-brand-blue opacity-0 transform scale-50 transition-all"><i class="fa-solid fa-circle-check text-xl"></i></div>
+                            </div>
+                        </label>
+
+                        <label class="relative cursor-pointer group">
+                            <input type="checkbox" class="feature-checkbox peer sr-only" data-price="299">
+                            <div class="bg-white border-2 border-slate-200 p-4 rounded-xl transition-all h-full">
+                                <div class="flex justify-between items-start mb-1">
+                                    <span class="font-bold text-brand-dark">Image Gallery</span>
+                                    <span class="text-orange-500 font-bold">+₹299</span>
+                                </div>
+                                <div class="check-icon absolute top-4 right-4 text-brand-blue opacity-0 transform scale-50 transition-all"><i class="fa-solid fa-circle-check text-xl"></i></div>
+                            </div>
+                        </label>
+
+                        <label class="relative cursor-pointer group">
+                            <input type="checkbox" class="feature-checkbox peer sr-only" data-price="99">
+                            <div class="bg-white border-2 border-slate-200 p-4 rounded-xl transition-all h-full">
+                                <div class="flex justify-between items-start mb-1">
+                                    <span class="font-bold text-brand-dark">Patient Reviews</span>
+                                    <span class="text-brand-blue font-bold">+₹99</span>
+                                </div>
+                                <div class="check-icon absolute top-4 right-4 text-brand-blue opacity-0 transform scale-50 transition-all"><i class="fa-solid fa-circle-check text-xl"></i></div>
+                            </div>
+                        </label>
+
+                        <label class="relative cursor-pointer group sm:col-span-2 lg:col-span-3">
+                            <input type="checkbox" class="feature-checkbox peer sr-only" id="customDomainCheckbox" data-price="999">
+                            <div class="bg-white border-2 border-slate-200 p-4 rounded-xl transition-all h-full">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="font-bold text-brand-dark">Custom Domain (.com / .in)</span>
+                                    <span class="text-emerald-600 font-bold">+₹999</span>
+                                </div>
+                                <div class="check-icon absolute top-4 right-4 text-brand-blue opacity-0 transform scale-50 transition-all"><i class="fa-solid fa-circle-check text-xl"></i></div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- Calculator Total -->
+                    <div class="bg-brand-dark text-white rounded-2xl p-6 flex flex-col md:flex-row justify-between items-center gap-4 shadow-xl">
+                        <div>
+                            <span class="text-slate-400 text-sm font-bold uppercase tracking-wider block mb-1">Estimated Total Cost</span>
+                            <span class="text-4xl font-extrabold text-brand-cyan" id="totalPrice">₹299</span><span class="text-slate-400">/year</span>
+                        </div>
+                        <button type="submit" class="bg-gradient-brand px-10 py-4 rounded-xl font-bold hover:scale-105 transition-transform w-full md:w-auto text-lg shadow-lg shadow-blue-500/20">
+                            Submit My Request <i class="fa-solid fa-check ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="py-20 bg-white reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-12">Why Doctors Choose Us</h2>
+            <div class="flex flex-wrap justify-center gap-4 md:gap-6">
+                <div class="bg-slate-50 border border-slate-100 px-6 py-4 rounded-full font-bold text-slate-700 flex items-center gap-2 shadow-sm"><i class="fa-solid fa-tag text-brand-cyan"></i> Affordable Pricing</div>
+                <div class="bg-slate-50 border border-slate-100 px-6 py-4 rounded-full font-bold text-slate-700 flex items-center gap-2 shadow-sm"><i class="fa-solid fa-bolt text-brand-cyan"></i> Fast Delivery</div>
+                <div class="bg-slate-50 border border-slate-100 px-6 py-4 rounded-full font-bold text-slate-700 flex items-center gap-2 shadow-sm"><i class="fa-solid fa-magnifying-glass-chart text-brand-cyan"></i> SEO Optimized</div>
+                <div class="bg-slate-50 border border-slate-100 px-6 py-4 rounded-full font-bold text-slate-700 flex items-center gap-2 shadow-sm"><i class="fa-solid fa-palette text-brand-cyan"></i> Professional Design</div>
+                <div class="bg-slate-50 border border-slate-100 px-6 py-4 rounded-full font-bold text-slate-700 flex items-center gap-2 shadow-sm"><i class="fa-solid fa-mobile-screen text-brand-cyan"></i> Mobile Friendly</div>
+                <div class="bg-slate-50 border border-slate-100 px-6 py-4 rounded-full font-bold text-slate-700 flex items-center gap-2 shadow-sm"><i class="fa-solid fa-server text-brand-cyan"></i> Secure Hosting</div>
             </div>
         </div>
     </section>
 
     <!-- FAQ Section -->
-    <section class="py-20 reveal">
+    <section id="faq" class="py-24 bg-brand-light reveal">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-brand-navy mb-4">Frequently Asked Questions</h2>
+                <h2 class="text-3xl md:text-5xl font-bold text-brand-dark mb-4">Frequently Asked Questions</h2>
             </div>
             
             <div class="space-y-4">
-                <details class="premium-card bg-white p-6 cursor-pointer group">
-                    <summary class="font-bold text-lg text-slate-800 flex justify-between items-center outline-none">
-                        How long does it take to build the website?
-                        <i class="fa-solid fa-chevron-down text-brand-blue transition-transform group-open:rotate-180"></i>
+                <details class="bg-white rounded-2xl shadow-sm border border-slate-200 group cursor-pointer" open>
+                    <summary class="font-bold text-brand-dark p-6 flex justify-between items-center outline-none">
+                        How long does website development take?
+                        <i class="fa-solid fa-chevron-down text-brand-blue group-open:rotate-180 transition-transform"></i>
                     </summary>
-                    <p class="text-slate-600 mt-4 leading-relaxed">For our Starter Plan, we typically deliver the completed website within 3-5 business days. Professional and Premium plans may take 1-2 weeks depending on complexity.</p>
+                    <div class="px-6 pb-6 text-slate-600 border-t border-slate-100 pt-4 mt-2">
+                        Your professional website will be ready and live within 2-3 business days after we receive all your details.
+                    </div>
                 </details>
                 
-                <details class="premium-card bg-white p-6 cursor-pointer group">
-                    <summary class="font-bold text-lg text-slate-800 flex justify-between items-center outline-none">
-                        Do I need to pay monthly maintenance fees?
-                        <i class="fa-solid fa-chevron-down text-brand-blue transition-transform group-open:rotate-180"></i>
+                <details class="bg-white rounded-2xl shadow-sm border border-slate-200 group cursor-pointer">
+                    <summary class="font-bold text-brand-dark p-6 flex justify-between items-center outline-none">
+                        Can I use my own domain?
+                        <i class="fa-solid fa-chevron-down text-brand-blue group-open:rotate-180 transition-transform"></i>
                     </summary>
-                    <p class="text-slate-600 mt-4 leading-relaxed">No hidden fees! Your hosting and domain charges are separate (usually minimal per year). We offer 2 free minor edits per month. If you need a dedicated maintenance plan, we offer affordable options, but they are not mandatory.</p>
+                    <div class="px-6 pb-6 text-slate-600 border-t border-slate-100 pt-4 mt-2">
+                        Yes, you can select the Custom Domain add-on for ₹999/year, and we will link your website to a professional .com or .in domain of your choice.
+                    </div>
                 </details>
 
-                <details class="premium-card bg-white p-6 cursor-pointer group">
-                    <summary class="font-bold text-lg text-slate-800 flex justify-between items-center outline-none">
-                        Will my website work on mobile phones?
-                        <i class="fa-solid fa-chevron-down text-brand-blue transition-transform group-open:rotate-180"></i>
+                <details class="bg-white rounded-2xl shadow-sm border border-slate-200 group cursor-pointer">
+                    <summary class="font-bold text-brand-dark p-6 flex justify-between items-center outline-none">
+                        Can patients book appointments?
+                        <i class="fa-solid fa-chevron-down text-brand-blue group-open:rotate-180 transition-transform"></i>
                     </summary>
-                    <p class="text-slate-600 mt-4 leading-relaxed">Yes, absolutely. 100% of the websites we build are mobile-first and fully responsive, ensuring they look premium on iPhones, Androids, and tablets.</p>
+                    <div class="px-6 pb-6 text-slate-600 border-t border-slate-100 pt-4 mt-2">
+                        Absolutely. With our Smart Patient Form add-on, patients can fill in their details on the website, and the booking request will be sent instantly to your clinic's WhatsApp.
+                    </div>
+                </details>
+
+                <details class="bg-white rounded-2xl shadow-sm border border-slate-200 group cursor-pointer">
+                    <summary class="font-bold text-brand-dark p-6 flex justify-between items-center outline-none">
+                        Can I update the website later?
+                        <i class="fa-solid fa-chevron-down text-brand-blue group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <div class="px-6 pb-6 text-slate-600 border-t border-slate-100 pt-4 mt-2">
+                        Yes! Just contact our support team on WhatsApp, and we will make the necessary text or image updates to your website.
+                    </div>
+                </details>
+
+                <details class="bg-white rounded-2xl shadow-sm border border-slate-200 group cursor-pointer">
+                    <summary class="font-bold text-brand-dark p-6 flex justify-between items-center outline-none">
+                        Do I need technical knowledge?
+                        <i class="fa-solid fa-chevron-down text-brand-blue group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <div class="px-6 pb-6 text-slate-600 border-t border-slate-100 pt-4 mt-2">
+                        Not at all. We handle all the technical aspects including coding, hosting, and SEO setup. You just provide your clinic details, and we do the rest.
+                    </div>
                 </details>
             </div>
         </div>
     </section>
 
-    <!-- Final CTA Section (Dark/Emotional) -->
-    <section id="contact" class="py-24 relative overflow-hidden bg-brand-navy text-white reveal">
-        <!-- Dark Premium Background with floating particles -->
-        <div class="absolute inset-0 bg-gradient-to-br from-brand-navy via-[#1e1b4b] to-brand-navy opacity-90"></div>
-        <div class="absolute top-1/2 left-1/4 w-96 h-96 bg-brand-blue rounded-full mix-blend-screen filter blur-[100px] opacity-40 animate-blob"></div>
-        <div class="absolute top-1/3 right-1/4 w-96 h-96 bg-brand-purple rounded-full mix-blend-screen filter blur-[100px] opacity-40 animate-blob animation-delay-2000"></div>
+    <!-- Final CTA -->
+    <section class="py-24 relative overflow-hidden reveal">
+        <div class="absolute inset-0 bg-gradient-brand"></div>
+        <div class="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full bg-white/10 blur-[100px]"></div>
         
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <h2 class="text-4xl md:text-6xl font-bold mb-6 tracking-tight">Your Future Clients Are <br> <span class="text-cyan-300">Already Online.</span></h2>
-            <p class="text-xl md:text-2xl text-indigo-200 mb-10 leading-relaxed font-light">Every day without a professional website is a missed opportunity for new customers and patients. Let's fix that today.</p>
+            <h2 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">Ready to Build Your Professional Online Presence?</h2>
+            <p class="text-xl text-white/80 mb-10 max-w-2xl mx-auto font-medium">Patients are already searching online. Don't let them find another clinic first.</p>
             
-            <div class="flex flex-col sm:flex-row justify-center gap-6">
-                <a href="https://wa.me/917829132612" class="bg-gradient-to-r from-brand-cyan to-brand-blue hover:from-brand-blue hover:to-brand-purple text-white font-bold text-lg px-10 py-5 rounded-full shadow-[0_0_40px_rgba(37,99,235,0.5)] hover:shadow-[0_0_60px_rgba(124,58,237,0.6)] transition-all transform hover:-translate-y-1 flex items-center justify-center gap-3">
-                    <i class="fa-solid fa-rocket"></i> Start Today
+            <div class="bg-white/10 backdrop-blur-md border border-white/20 inline-block px-6 py-2 rounded-full text-white font-bold tracking-widest uppercase mb-10 shadow-lg">
+                Starting from just ₹299/year
+            </div>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#builder" class="bg-white text-brand-blue font-bold px-10 py-4 rounded-full shadow-2xl hover:scale-105 transition-transform text-lg flex items-center justify-center">
+                    Get My Website Today
                 </a>
-                <a href="https://wa.me/917829132612" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white font-bold text-lg px-10 py-5 rounded-full transition-all flex items-center justify-center gap-3">
-                    <i class="fa-brands fa-whatsapp text-green-400 text-xl"></i> Chat on WhatsApp
+                <a href="https://wa.me/917829132612" target="_blank" class="bg-brand-dark text-white font-bold px-10 py-4 rounded-full hover:bg-slate-800 transition-colors flex items-center justify-center gap-2 text-lg shadow-2xl border border-slate-700">
+                    <i class="fa-brands fa-whatsapp text-xl text-green-400"></i> Contact on WhatsApp
                 </a>
             </div>
-            <p class="mt-8 text-indigo-300 text-sm">Quick response guaranteed. No commitment required to chat.</p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-white pt-16 pb-8 border-t border-slate-100">
+    <footer class="bg-brand-dark text-slate-400 py-12 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-8 mb-8">
-                <!-- Brand -->
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
                 <div class="flex items-center gap-2">
-                    <div class="w-8 h-8 rounded-lg bg-brand-blue flex items-center justify-center text-white font-bold shadow-md">
-                        <i class="fa-solid fa-bolt text-sm"></i>
-                    </div>
-                    <span class="font-heading font-bold text-xl text-brand-navy">Snap<span class="text-brand-blue">Web</span></span>
+                    <img src="WhatsApp Image 2026-06-14 at 11.56.17 AM.jpeg" alt="Snapweb Logo" class="h-10 w-auto object-contain rounded-lg">
                 </div>
                 
-                <!-- Contact Info -->
-                <div class="flex flex-col sm:flex-row gap-6 text-slate-600 font-medium">
-                    <a href="mailto:customercare.snapweb@gmail.com" class="hover:text-brand-blue flex items-center gap-2 transition-colors">
-                        <i class="fa-solid fa-envelope"></i> customercare.snapweb@gmail.com
-                    </a>
-                    <a href="tel:+917829132612" class="hover:text-brand-blue flex items-center gap-2 transition-colors">
-                        <i class="fa-solid fa-phone"></i> +91 78291 32612
-                    </a>
+                <div class="flex flex-wrap justify-center gap-6 font-medium text-sm">
+                    <a href="tel:+917829132612" class="hover:text-white transition-colors"><i class="fa-solid fa-phone mr-1"></i> +91 78291 32612</a>
+                    <a href="mailto:customercare.snapweb@gmail.com" class="hover:text-white transition-colors"><i class="fa-solid fa-envelope mr-1"></i> customercare.snapweb@gmail.com</a>
+                    <a href="https://wa.me/917829132612" class="hover:text-white transition-colors"><i class="fa-brands fa-whatsapp mr-1"></i> WhatsApp</a>
                 </div>
 
-                <!-- Socials -->
-                <div class="flex gap-4">
-                    <a href="#" class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-brand-blue hover:text-white transition-all"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-brand-blue hover:text-white transition-all"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-brand-blue hover:text-white transition-all"><i class="fa-brands fa-linkedin-in"></i></a>
+                <div class="flex gap-4 text-xl">
+                    <a href="https://www.instagram.com/sna.pweb?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="hover:text-brand-cyan transition-colors"><i class="fa-brands fa-instagram"></i></a>
                 </div>
             </div>
-            <div class="text-center text-slate-400 text-sm pt-8 border-t border-slate-100">
-                &copy; <span id="year"></span> SnapWeb Design. All rights reserved. Premium Websites for Growing Businesses.
+            
+            <div class="text-center text-sm pt-8 mt-8 border-t border-slate-800">
+                <p>&copy; <span id="year"></span> Snapweb. All rights reserved. Designed for Healthcare Professionals.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Floating WhatsApp Widget -->
-    <a href="https://wa.me/917829132612" target="_blank" class="fixed bottom-6 right-6 w-16 h-16 bg-green-500 rounded-full flex items-center justify-center text-white text-3xl shadow-lg shadow-green-500/40 hover:scale-110 hover:shadow-green-500/60 transition-all z-50 animate-pulse-slow">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
-
-    <!-- Scripts -->
+    <!-- JS Logic -->
     <script>
-        // Set Copyright Year
+        // Set Year
         document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Scroll Reveal Animation
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Sticky Navbar
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
 
         // Mobile Menu Toggle
         const btn = document.getElementById('mobile-menu-btn');
@@ -832,46 +921,64 @@
             menu.classList.toggle('hidden');
         });
 
-        // Close mobile menu on link click
-        menu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.add('hidden');
-            });
-        });
+        // Dynamic Price Calculator
+        const checkboxes = document.querySelectorAll('.feature-checkbox');
+        const totalDisplay = document.getElementById('totalPrice');
+        const basePrice = 299;
 
-        // Scroll animations (Intersection Observer)
-        const revealElements = document.querySelectorAll('.reveal');
-        
-        const revealCallback = (entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                    observer.unobserve(entry.target); // Trigger only once
+        function calculateTotal() {
+            let total = basePrice;
+            checkboxes.forEach(cb => {
+                if (cb.checked) {
+                    total += parseInt(cb.dataset.price);
                 }
             });
-        };
+            
+            totalDisplay.style.transform = 'scale(1.1)';
+            totalDisplay.style.color = '#fff';
+            setTimeout(() => {
+                totalDisplay.innerText = `₹${total}`;
+                totalDisplay.style.transform = 'scale(1)';
+                totalDisplay.style.color = '#06b6d4';
+            }, 150);
+        }
 
-        const revealOptions = {
-            threshold: 0.15,
-            rootMargin: "0px 0px -50px 0px"
-        };
+        checkboxes.forEach(cb => cb.addEventListener('change', calculateTotal));
 
-        const revealObserver = new IntersectionObserver(revealCallback, revealOptions);
-        
-        revealElements.forEach(el => {
-            revealObserver.observe(el);
-        });
+        // Handle Form Submission to WhatsApp
+        document.getElementById('doctorForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Collect form fields dynamically
+            const inputs = this.querySelectorAll('input, textarea, select');
+            let formData = {};
+            inputs.forEach(input => {
+                if(input.type === 'checkbox') {
+                    if(input.checked) {
+                        const name = input.closest('label').querySelector('.font-bold').innerText;
+                        if(!formData['Selected Features']) formData['Feature Selection'] = [];
+                        formData['Feature Selection'].push(name);
+                    }
+                } else if(input.value) {
+                    const label = input.closest('div').querySelector('label');
+                    const labelText = label ? label.innerText : input.placeholder || 'Field';
+                    formData[labelText] = input.value;
+                }
+            });
 
-        // Sticky Navbar styling on scroll
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 20) {
-                navbar.classList.add('shadow-md', 'bg-white/90');
-                navbar.classList.remove('glass');
-            } else {
-                navbar.classList.remove('shadow-md', 'bg-white/90');
-                navbar.classList.add('glass');
+            // Format message for WhatsApp
+            let message = `*New Clinic Website Registration - Snapweb*\n\n`;
+            for (const [key, value] of Object.entries(formData)) {
+                if (Array.isArray(value)) {
+                    message += `*${key}:*\n- ${value.join('\n- ')}\n`;
+                } else {
+                    message += `*${key}:* ${value}\n`;
+                }
             }
+            message += `\n*Estimated Plan Total:* ${totalDisplay.innerText}/year`;
+
+            const encodedMessage = encodeURIComponent(message);
+            window.open(`https://wa.me/917829132612?text=${encodedMessage}`, '_blank');
         });
     </script>
 </body>
