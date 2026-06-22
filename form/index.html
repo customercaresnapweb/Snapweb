@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Build Your Clinic Profile | Snapweb</title>
+    <meta name="description" content="Fill in your details to build your professional medical website with Snapweb.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#2563eb',
+                            cyan: '#06b6d4',
+                            dark: '#0f172a',
+                            light: '#f8fafc'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { background-color: #0f172a; color: #f8fafc; overflow-x: hidden; }
+        
+        .glass-nav { background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+        .text-gradient { background: linear-gradient(135deg, #2563eb, #06b6d4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .bg-gradient-brand { background: linear-gradient(135deg, #2563eb, #06b6d4); }
+        
+        /* Custom Checkbox */
+        .feature-checkbox:checked + div { border-color: #2563eb; background-color: #eff6ff; box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2); }
+        .feature-checkbox:checked + div .check-icon { opacity: 1; transform: scale(1); }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-blue selection:text-white">
+
+    <!-- CHANGED 'fixed' TO 'absolute' HERE SO IT DOESN'T GET STUCK ON MOBILE -->
+    <nav class="absolute top-0 w-full z-50 glass-nav">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center gap-2 group text-white font-bold text-xl hover:text-brand-cyan transition-colors">
+                    <i class="fa-solid fa-arrow-left"></i> Back to Home
+                </a>
+                <div class="font-bold text-xl tracking-wide">
+                    Snapweb <span class="text-brand-cyan">Medical</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Builder Section -->
+    <section class="pt-32 pb-24 relative overflow-hidden min-h-screen">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Build Your Clinic Profile</h1>
+                <p class="text-slate-400 text-lg">Fill in your complete details below to generate your website.</p>
+            </div>
+
+            <form id="doctorForm" class="space-y-8">
+                
+                <!-- 1. DOCTOR DETAILS -->
+                <div class="bg-white rounded-3xl p-8 shadow-xl">
+                    <h3 class="text-xl font-bold text-brand-dark mb-6 flex items-center gap-3 border-b border-slate-100 pb-4">
+                        <div class="w-8 h-8 rounded-full bg-blue-100 text-brand-blue flex items-center justify-center text-sm">1</div> 
+                        👨‍⚕️ Doctor Details
+                    </h3>
+                    <div class="grid md:grid-cols-2 gap-6 text-slate-700">
+                        <div>
+                            <label class="block text-sm font-bold mb-2">Full Name (with Title)</label>
+                            <input type="text" placeholder="e.g. Dr. John Doe" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold mb-2">Qualifications</label>
+                            <input type="text" placeholder="e.g. MBBS, MD" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold mb-2">Medical Registration Number</label>
+                            <input type="text" placeholder="Medical Council Reg No." class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold mb-2">Current Designation</label>
+                            <input type="text" placeholder="e.g. Senior Consultant" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold mb-2">Specialty</label>
+                            <input type="text" placeholder="e.g. Cardiologist" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold mb-2">Sub-specialty (Optional)</label>
+                            <input type="text" placeholder="e.g. Interventional Cardiology" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold mb-2">Years of Experience</label>
+                            <input type="number" placeholder="e.g. 10" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold mb-2">Clinic/Hospital Name</label>
+                            <input type="text" placeholder="Name of your practice" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors">
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block text-sm font-bold mb-2">Profile Photo Link (Or note to send on WA)</label>
+                            <input type="text" placeholder="e.g. Google Drive link or 'Sending on WhatsApp'" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. ABOUT THE DOCTOR -->
+                <div class="bg-white rounded-3xl p-8 shadow-xl text-slate-700">
+                    <h3 class="text-xl font-bold text-brand-dark mb-6 flex items-center gap-3 border-b border-slate-100 pb-4">
+                        <div class="w-8 h-8 rounded-full bg-blue-100 text-brand-blue flex items-center justify-center text-sm">2</div> 
+                        📝 About The Doctor
+                    </h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="md:col-span-2">
+                            <label class="block text-sm font-bold mb-2">Short Introduction</label>
+                            <textarea rows="2" placeholder="A brief 1-2 line intro for the top of your profile." class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors"></textarea>
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block text-sm font-bold mb-2">Detailed Biography</label>
+                            <textarea rows="4" placeholder="Your full professional background and philosophy..." class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors"></textarea>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold mb-2">Areas of Expertise</label>
+                            <textarea rows="3" placeholder="List your specific areas of medical expertise" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors"></textarea>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold mb-2">Professional Memberships</label>
+                            <textarea rows="3" placeholder="e.g. Member of Indian Medical Association (IMA)" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors"></textarea>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold mb-2">Awards & Recognitions</label>
+                            <textarea rows="3" placeholder="List any awards or special recognitions" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors"></textarea>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold mb-2">Why Patients Should Choose You</label>
+                            <textarea rows="3" placeholder="What makes your practice unique?" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors"></textarea>
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block text-sm font-bold mb-2">Languages Spoken</label>
+                            <input type="text" placeholder="e.g. English, Hindi, Malayalam" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. CONTACT DETAILS -->
+                <div class="bg-white rounded-3xl p-8 shadow-xl text-slate-700">
+                    <h3 class="text-xl font-bold text-brand-dark mb-6 flex items-center gap-3 border-b border-slate-100 pb-4">
+                        <div class="w-8 h-8 rounded-full bg-blue-100 text-brand-blue flex items-center justify-center text-sm">3</div> 
+                        📞 Contact Details
+                    </h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-bold mb-2">Phone Number</label>
+                            <input type="tel" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold mb-2">Email Address</label>
+                            <input type="email" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors">
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block text-sm font-bold mb-2">Clinic Address</label>
+                            <textarea rows="2" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors"></textarea>
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block text-sm font-bold mb-2">Google Maps Location Link</label>
+                            <input type="url" placeholder="Paste map URL here" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. SERVICES & CONDITIONS -->
+                <div class="bg-white rounded-3xl p-8 shadow-xl text-slate-700">
+                    <h3 class="text-xl font-bold text-brand-dark mb-6 flex items-center gap-3 border-b border-slate-100 pb-4">
+                        <div class="w-8 h-8 rounded-full bg-blue-100 text-brand-blue flex items-center justify-center text-sm">4</div> 
+                        🏥 Services & ❤️ Conditions
+                    </h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-bold mb-2">Services Offered</label>
+                            <textarea rows="4" placeholder="List your key services, separated by commas..." class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors"></textarea>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold mb-2">Conditions / Diseases Treated</label>
+                            <textarea rows="4" placeholder="List conditions you treat..." class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. FAQS -->
+                <div class="bg-white rounded-3xl p-8 shadow-xl text-slate-700">
+                    <h3 class="text-xl font-bold text-brand-dark mb-6 flex items-center gap-3 border-b border-slate-100 pb-4">
+                        <div class="w-8 h-8 rounded-full bg-blue-100 text-brand-blue flex items-center justify-center text-sm">5</div> 
+                        ❓ Frequently Asked Questions (Optional)
+                    </h3>
+                    <div class="grid gap-6">
+                        <div>
+                            <label class="block text-sm font-bold mb-2">List your FAQs (Format: Q: Question? A: Answer)</label>
+                            <textarea rows="4" placeholder="Q: What are your consultation timings?&#10;A: Monday to Saturday, 10 AM to 5 PM." class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. SOCIAL MEDIA LINKS -->
+                <div class="bg-white rounded-3xl p-8 shadow-xl text-slate-700">
+                    <h3 class="text-xl font-bold text-brand-dark mb-6 flex items-center gap-3 border-b border-slate-100 pb-4">
+                        <div class="w-8 h-8 rounded-full bg-blue-100 text-brand-blue flex items-center justify-center text-sm">6</div> 
+                        🌐 Social Media Links
+                    </h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="relative">
+                            <i class="fa-brands fa-facebook absolute left-4 top-3.5 text-slate-400 text-lg"></i>
+                            <input type="url" placeholder="Facebook Profile URL" class="w-full pl-11 pr-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors">
+                        </div>
+                        <div class="relative">
+                            <i class="fa-brands fa-instagram absolute left-4 top-3.5 text-slate-400 text-lg"></i>
+                            <input type="url" placeholder="Instagram Profile URL" class="w-full pl-11 pr-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors">
+                        </div>
+                        <div class="relative">
+                            <i class="fa-brands fa-linkedin absolute left-4 top-3.5 text-slate-400 text-lg"></i>
+                            <input type="url" placeholder="LinkedIn Profile URL" class="w-full pl-11 pr-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors">
+                        </div>
+                        <div class="relative">
+                            <i class="fa-brands fa-youtube absolute left-4 top-3.5 text-slate-400 text-lg"></i>
+                            <input type="url" placeholder="YouTube Channel URL" class="w-full pl-11 pr-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors">
+                        </div>
+                        <div class="relative">
+                            <i class="fa-brands fa-x-twitter absolute left-4 top-3.5 text-slate-400 text-lg"></i>
+                            <input type="url" placeholder="X (Twitter) Profile URL" class="w-full pl-11 pr-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors">
+                        </div>
+                        <div class="relative">
+                            <i class="fa-solid fa-link absolute left-4 top-3.5 text-slate-400 text-lg"></i>
+                            <input type="url" placeholder="Other Link URL" class="w-full pl-11 pr-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. ADDITIONAL INFORMATION -->
+                <div class="bg-white rounded-3xl p-8 shadow-xl text-slate-700">
+                    <h3 class="text-xl font-bold text-brand-dark mb-6 flex items-center gap-3 border-b border-slate-100 pb-4">
+                        <div class="w-8 h-8 rounded-full bg-blue-100 text-brand-blue flex items-center justify-center text-sm">7</div> 
+                        📌 Additional Information
+                    </h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-bold mb-2">Additional Instructions</label>
+                            <textarea rows="3" placeholder="Any specific design requests or notes for our team..." class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors"></textarea>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold mb-2">Special Requirements</label>
+                            <textarea rows="3" placeholder="Any specific functionality or unique clinic needs..." class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white outline-none transition-colors"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. FEATURES TO BE INCLUDED -->
+                <div class="bg-white rounded-3xl p-8 shadow-xl border-4 border-brand-cyan relative overflow-hidden">
+                    <h3 class="text-2xl font-extrabold text-brand-dark mb-2">Features to be Included</h3>
+                    <p class="text-slate-500 mb-8">Select any additional premium features below:</p>
+                    
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+                        <label class="relative cursor-pointer group">
+                            <input type="checkbox" class="feature-checkbox peer sr-only">
+                            <div class="bg-slate-50 border-2 border-slate-200 p-4 rounded-xl transition-all h-full">
+                                <div class="flex justify-between items-start mb-1">
+                                    <span class="font-bold text-brand-dark">Smart Form + WA</span>
+                                </div>
+                                <div class="check-icon absolute top-4 right-4 text-brand-blue opacity-0 transform scale-50 transition-all"><i class="fa-solid fa-circle-check text-xl"></i></div>
+                            </div>
+                        </label>
+                        
+                        <label class="relative cursor-pointer group">
+                            <input type="checkbox" class="feature-checkbox peer sr-only">
+                            <div class="bg-slate-50 border-2 border-slate-200 p-4 rounded-xl transition-all h-full">
+                                <div class="flex justify-between items-start mb-1">
+                                    <span class="font-bold text-brand-dark">Floating WhatsApp</span>
+                                </div>
+                                <div class="check-icon absolute top-4 right-4 text-brand-blue opacity-0 transform scale-50 transition-all"><i class="fa-solid fa-circle-check text-xl"></i></div>
+                            </div>
+                        </label>
+                        
+                        <label class="relative cursor-pointer group">
+                            <input type="checkbox" class="feature-checkbox peer sr-only">
+                            <div class="bg-slate-50 border-2 border-slate-200 p-4 rounded-xl transition-all h-full">
+                                <div class="flex justify-between items-start mb-1">
+                                    <span class="font-bold text-brand-dark">Advanced Google Maps</span>
+                                </div>
+                                <div class="check-icon absolute top-4 right-4 text-brand-blue opacity-0 transform scale-50 transition-all"><i class="fa-solid fa-circle-check text-xl"></i></div>
+                            </div>
+                        </label>
+
+                        <label class="relative cursor-pointer group">
+                            <input type="checkbox" class="feature-checkbox peer sr-only">
+                            <div class="bg-slate-50 border-2 border-slate-200 p-4 rounded-xl transition-all h-full">
+                                <div class="flex justify-between items-start mb-1">
+                                    <span class="font-bold text-brand-dark">Health Articles/Blog</span>
+                                </div>
+                                <div class="check-icon absolute top-4 right-4 text-brand-blue opacity-0 transform scale-50 transition-all"><i class="fa-solid fa-circle-check text-xl"></i></div>
+                            </div>
+                        </label>
+
+                        <label class="relative cursor-pointer group">
+                            <input type="checkbox" class="feature-checkbox peer sr-only">
+                            <div class="bg-slate-50 border-2 border-slate-200 p-4 rounded-xl transition-all h-full">
+                                <div class="flex justify-between items-start mb-1">
+                                    <span class="font-bold text-brand-dark">Before & After Gallery</span>
+                                </div>
+                                <div class="check-icon absolute top-4 right-4 text-brand-blue opacity-0 transform scale-50 transition-all"><i class="fa-solid fa-circle-check text-xl"></i></div>
+                            </div>
+                        </label>
+
+                        <label class="relative cursor-pointer group">
+                            <input type="checkbox" class="feature-checkbox peer sr-only">
+                            <div class="bg-slate-50 border-2 border-slate-200 p-4 rounded-xl transition-all h-full">
+                                <div class="flex justify-between items-start mb-1">
+                                    <span class="font-bold text-brand-dark">Online Payment</span>
+                                </div>
+                                <div class="check-icon absolute top-4 right-4 text-brand-blue opacity-0 transform scale-50 transition-all"><i class="fa-solid fa-circle-check text-xl"></i></div>
+                            </div>
+                        </label>
+
+                        <label class="relative cursor-pointer group">
+                            <input type="checkbox" class="feature-checkbox peer sr-only">
+                            <div class="bg-slate-50 border-2 border-slate-200 p-4 rounded-xl transition-all h-full">
+                                <div class="flex justify-between items-start mb-1">
+                                    <span class="font-bold text-brand-dark">Prescription Gen.</span>
+                                </div>
+                                <div class="check-icon absolute top-4 right-4 text-brand-blue opacity-0 transform scale-50 transition-all"><i class="fa-solid fa-circle-check text-xl"></i></div>
+                            </div>
+                        </label>
+
+                        <label class="relative cursor-pointer group">
+                            <input type="checkbox" class="feature-checkbox peer sr-only">
+                            <div class="bg-slate-50 border-2 border-slate-200 p-4 rounded-xl transition-all h-full">
+                                <div class="flex justify-between items-start mb-1">
+                                    <span class="font-bold text-brand-dark">FAQ Section</span>
+                                </div>
+                                <div class="check-icon absolute top-4 right-4 text-brand-blue opacity-0 transform scale-50 transition-all"><i class="fa-solid fa-circle-check text-xl"></i></div>
+                            </div>
+                        </label>
+
+                        <label class="relative cursor-pointer group">
+                            <input type="checkbox" class="feature-checkbox peer sr-only">
+                            <div class="bg-slate-50 border-2 border-slate-200 p-4 rounded-xl transition-all h-full">
+                                <div class="flex justify-between items-start mb-1">
+                                    <span class="font-bold text-brand-dark">Premium Logo</span>
+                                </div>
+                                <div class="check-icon absolute top-4 right-4 text-brand-blue opacity-0 transform scale-50 transition-all"><i class="fa-solid fa-circle-check text-xl"></i></div>
+                            </div>
+                        </label>
+                        
+                        <label class="relative cursor-pointer group">
+                            <input type="checkbox" class="feature-checkbox peer sr-only">
+                            <div class="bg-slate-50 border-2 border-slate-200 p-4 rounded-xl transition-all h-full">
+                                <div class="flex justify-between items-start mb-1">
+                                    <span class="font-bold text-brand-dark">Social Media Int.</span>
+                                </div>
+                                <div class="check-icon absolute top-4 right-4 text-brand-blue opacity-0 transform scale-50 transition-all"><i class="fa-solid fa-circle-check text-xl"></i></div>
+                            </div>
+                        </label>
+
+                        <label class="relative cursor-pointer group">
+                            <input type="checkbox" class="feature-checkbox peer sr-only">
+                            <div class="bg-slate-50 border-2 border-slate-200 p-4 rounded-xl transition-all h-full">
+                                <div class="flex justify-between items-start mb-1">
+                                    <span class="font-bold text-brand-dark">Image Gallery</span>
+                                </div>
+                                <div class="check-icon absolute top-4 right-4 text-brand-blue opacity-0 transform scale-50 transition-all"><i class="fa-solid fa-circle-check text-xl"></i></div>
+                            </div>
+                        </label>
+
+                        <label class="relative cursor-pointer group">
+                            <input type="checkbox" class="feature-checkbox peer sr-only">
+                            <div class="bg-slate-50 border-2 border-slate-200 p-4 rounded-xl transition-all h-full">
+                                <div class="flex justify-between items-start mb-1">
+                                    <span class="font-bold text-brand-dark">Patient Reviews</span>
+                                </div>
+                                <div class="check-icon absolute top-4 right-4 text-brand-blue opacity-0 transform scale-50 transition-all"><i class="fa-solid fa-circle-check text-xl"></i></div>
+                            </div>
+                        </label>
+
+                        <label class="relative cursor-pointer group sm:col-span-2 lg:col-span-3">
+                            <input type="checkbox" class="feature-checkbox peer sr-only" id="customDomainCheckbox">
+                            <div class="bg-slate-50 border-2 border-slate-200 p-4 rounded-xl transition-all h-full">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="font-bold text-brand-dark">Custom Domain (.com / .in)</span>
+                                </div>
+                                <div class="check-icon absolute top-4 right-4 text-brand-blue opacity-0 transform scale-50 transition-all"><i class="fa-solid fa-circle-check text-xl"></i></div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="bg-brand-dark text-white rounded-2xl p-6 flex justify-center items-center gap-4 shadow-xl">
+                        <button type="submit" class="bg-gradient-brand px-10 py-4 rounded-xl font-bold hover:scale-105 transition-transform w-full md:w-auto text-lg shadow-lg shadow-blue-500/20">
+                            Submit My Request <i class="fa-solid fa-check ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Simple Footer -->
+    <footer class="bg-slate-900 text-slate-500 py-8 border-t border-slate-800 text-center text-sm">
+        <p>&copy; 2026 Snapweb. All rights reserved. Designed for Healthcare Professionals.</p>
+    </footer>
+
+    <script>
+        // Handle Form Submission to WhatsApp
+        document.getElementById('doctorForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Collect form fields dynamically
+            const inputs = this.querySelectorAll('input, textarea, select');
+            let formData = {};
+            inputs.forEach(input => {
+                if(input.type === 'checkbox') {
+                    if(input.checked) {
+                        const name = input.closest('label').querySelector('.font-bold').innerText;
+                        if(!formData['Selected Features']) formData['Feature Selection'] = [];
+                        formData['Feature Selection'].push(name);
+                    }
+                } else if(input.value) {
+                    const label = input.closest('div').querySelector('label');
+                    const labelText = label ? label.innerText : input.placeholder || 'Field';
+                    formData[labelText] = input.value;
+                }
+            });
+
+            // Format message for WhatsApp
+            let message = `*New Clinic Website Registration - Snapweb*\n\n`;
+            for (const [key, value] of Object.entries(formData)) {
+                if (Array.isArray(value)) {
+                    message += `*${key}:*\n- ${value.join('\n- ')}\n`;
+                } else {
+                    message += `*${key}:* ${value}\n`;
+                }
+            }
+
+            const encodedMessage = encodeURIComponent(message);
+            window.open(`https://wa.me/917829132612?text=${encodedMessage}`, '_blank');
+        });
+    </script>
+</body>
+</html>
